@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Johnson",
+    "role": "UI/UX Designer",
+    "subject": "Portfolio Development",
+    "review": "This course completely transformed my design skills. The mentorship was incredible and I landed my first design job within 2 months of completing the program.",
+    "rating": 5,
+    "profileImage": "/Images/sample.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Michael Chen",
+    "role": "Product Designer",
+    "subject": "Design Fundamentals",
+    "review": "Amazing course structure! The practical projects helped me build a portfolio that impressed employers. Highly recommend for beginners.",
+    "rating": 5,
+    "profileImage": "/Images/sample.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Emily Rodriguez",
+    "role": "Freelance Designer",
+    "subject": "Freelance Mentorship",
+    "review": "The freelance mentorship was a game-changer. I learned how to price my work and find clients. Now I'm running my own design business successfully.",
+    "rating": 4,
+    "profileImage": "/Images/sample.jpg"
+  },
+  {
+    "id": 4,
+    "name": "David Kim",
+    "role": "Junior Designer",
+    "subject": "Design Tools",
+    "review": "Great introduction to design tools and principles. The no-coding approach made it accessible for someone with zero technical background like me.",
+    "rating": 5,
+    "profileImage": "/Images/sample.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Lisa Thompson",
+    "role": "Career Changer",
+    "subject": "Career Transition",
+    "review": "Switched from marketing to UX design thanks to this course. The mentors provided excellent guidance throughout my career transition journey.",
+    "rating": 4,
+    "profileImage": "/Images/sample.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Alex Martinez",
+    "role": "Design Student",
+    "subject": "Portfolio Building",
+    "review": "The portfolio building section was outstanding. I created 3 professional projects that helped me stand out in job interviews.",
+    "rating": 5,
+    "profileImage": "/Images/sample.jpg"
+  }
+]

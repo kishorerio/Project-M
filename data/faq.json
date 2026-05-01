@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "question": "Is this course beginner-friendly?",
+    "answer": "Hi, I'm Manoj Kumar, a UI/UX Designer with 4+ years of experience working on real-world products like ERP systems, mobile apps, and business platforms. I started my journey just like many beginners—confused, exploring, and trying to understand how design actually works in the real world."
+  },
+  {
+    "id": 2,
+    "question": "Do I need prior UX/UI knowledge to join?",
+    "answer": "No prior UX/UI knowledge is required. This course is designed for complete beginners. We start from the basics and gradually build up your skills with practical projects and real-world examples."
+  },
+  {
+    "id": 3,
+    "question": "Will there be live sessions or recorded videos?",
+    "answer": "The course includes both live sessions and recorded videos. Live sessions allow for real-time interaction and Q&A, while recorded videos let you learn at your own pace and revisit concepts whenever needed."
+  },
+  {
+    "id": 4,
+    "question": "Do I get personalized feedback?",
+    "answer": "Yes, you'll receive personalized feedback on all your projects and assignments. Our mentors review your work individually and provide detailed feedback to help you improve your design skills."
+  },
+  {
+    "id": 5,
+    "question": "How many students are in each batch?",
+    "answer": "We keep our batch sizes small, typically 15-20 students per batch. This ensures personalized attention and better interaction between students and mentors."
+  },
+  {
+    "id": 6,
+    "question": "What if I have doubts during the course?",
+    "answer": "You can ask questions anytime through our dedicated support channels. We have regular doubt-clearing sessions, one-on-one mentorship calls, and a community where you can get help from peers and mentors."
+  },
+  {
+    "id": 7,
+    "question": "Will I receive a certificate?",
+    "answer": "Yes, upon successful completion of the course and all projects, you'll receive a certificate of completion. This certificate validates your skills and can be added to your portfolio and LinkedIn profile."
+  }
+]
