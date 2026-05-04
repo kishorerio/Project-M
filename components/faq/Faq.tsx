@@ -75,7 +75,7 @@ const IconButton = styled.button`
   transition: transform 0.3s ease;
 `;
 
-const PlusIcon = styled.div`
+const PlusIcon = styled.div<{ $isOpen?: boolean }>`
   width: 24px;
   height: 24px;
   position: relative;
@@ -101,7 +101,7 @@ const PlusIcon = styled.div`
     height: 24px;
     top: 0;
     left: 50%;
-    transform: translateX(-50%) ${props => props.isOpen ? 'rotate(90deg)' : 'rotate(0deg)'};
+    transform: translateX(-50%) ${props => props.$isOpen ? 'rotate(90deg)' : 'rotate(0deg)'};
   }
 `;
 
@@ -161,7 +161,7 @@ export const Faq = () => {
                 {openItem === faq.id ? (
                   <MinusIcon />
                 ) : (
-                  <PlusIcon isOpen={false} />
+                  <PlusIcon $isOpen={false} />
                 )}
               </IconButton>
             </QuestionHeader>
