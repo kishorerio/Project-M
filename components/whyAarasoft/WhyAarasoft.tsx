@@ -176,7 +176,7 @@ export const WhyAarasoft = () => {
             id: 1,
             number: '01',
             title: 'Real-World Projects, Not Just Theory',
-            bgImage: '/Images/Rectangleone.png',
+            bgImage: '/Images/RectangleOne.png',
             height: '472px',
             textColor: theme.colors.white,
             numberBgColor: theme.colors.primary,
