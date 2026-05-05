@@ -40,12 +40,12 @@ const StyledButton = styled.button<{
   width: ${props => props.$width};
   white-space: nowrap;
 
-  // &:hover {
-  //   background-color: ${theme.colors.white};
-  //   color: ${theme.colors.secondary};
-  //   transform: translateY(-2px);
-  //   border: 1px solid ${theme.colors.secondary}
-  // }
+  @media (max-width: 768px) {
+    width: 100% !important;
+    max-width: 20rem;
+    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
+  }
 `;
 
 const Button: React.FC<ButtonProps> = ({

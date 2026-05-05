@@ -18,7 +18,7 @@ const Home = () => {
             </section>
             <Info/>
             <WhyAarasoft/>
-            <Marquee/>
+            {/* <Marquee/>
             <WhyCourse/>
             <section id="course">
                 <Course/>
@@ -32,7 +32,7 @@ const Home = () => {
             <Faq/>
             <section id="contact">
                 <CareerContact/>
-            </section>
+            </section> */}
         </div>
     );
 };

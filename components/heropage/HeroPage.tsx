@@ -16,6 +16,10 @@ const HeroContainer = styled.div `
   padding-top: 80px;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    margin: -80px 1.125rem 0 1.125rem;
+  }
 `;
 
 const FloatingIcon = styled.img<{ $position: string }>`
@@ -39,6 +43,14 @@ const BlueIcon = styled(FloatingIcon)`
   width: 11.078rem;
   height: 4rem;
   animation-delay: 0s;
+
+  @media (max-width: 768px) {
+    width: 166px;
+    height: 50px;
+    left: 4%;
+    top: auto;
+    bottom: 10%;
+  }
 `;
 
 const KaaviIcon = styled(FloatingIcon)`
@@ -47,6 +59,15 @@ const KaaviIcon = styled(FloatingIcon)`
   width: 11.078rem;
   height: 4rem;
   animation-delay: 1s;
+
+  @media (max-width: 768px) {
+    width: 166px;
+    height: 50px;
+    left: auto;
+    right: 2%;
+    bottom: auto;
+    top: 25%;
+  }
 `;
 
 const GreenIcon = styled(FloatingIcon)`
@@ -55,12 +76,25 @@ const GreenIcon = styled(FloatingIcon)`
   width: 11.078rem;
   height: 4rem;
   animation-delay: 0.5s;
+
+  @media (max-width: 768px) {
+    width: 166px;
+    height: 50px;
+    left: 0;
+    top: 22%;
+  }
 `;
 
-const TextWrap = styled.h1 `
+const TextWrap = styled.div `
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 100%;
+  padding: 0 1.125rem;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 const Title = styled.h1 `
@@ -68,16 +102,16 @@ const Title = styled.h1 `
   font-family: 'Rightgrotesk-widemedium', sans-serif;
   font-weight: 500;
   line-height: 120%;
-  color: ${
-    theme.colors.secondary
-};
-margin-bottom: 3rem;
-text-align: center;
+  color: ${theme.colors.secondary};
+  margin-bottom: 3rem;
+  text-align: center;
 
   span {
-    color: ${
-    theme.colors.primary
-};
+    color: ${theme.colors.primary};
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
   }
 `;
 
@@ -88,11 +122,13 @@ const SubTitle = styled.p `
   line-height: 150%;
   letter-spacing: 0%;
   text-align: center;
-  color: ${
-    theme.colors.secondaryTextColor
-};
-margin-bottom: 3rem;
+  color: ${theme.colors.secondaryTextColor};
+  margin-bottom: 3rem;
+  padding: 0 1rem;
 
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+  }
 `;
 
 const HeroPage = () => {
