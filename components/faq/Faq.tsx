@@ -11,9 +11,34 @@ const FaqContainer = styled.div`
   gap: 5rem;
   margin: 0 2.5rem;
   margin-bottom: 6.25rem;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 2rem 4rem;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 1.125rem 3rem;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    margin: 0 1rem 2.5rem;
+  }
+
+  @media (max-width: 320px) {
+    margin: 0 0.75rem 2rem;
+    gap: 1rem;
+  }
 `;
 
 const LeftSection = styled.div`
+  @media (max-width: 960px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 `;
 
 const Title = styled.h2`
@@ -27,6 +52,19 @@ const Title = styled.h2`
   span {
     color: ${theme.colors.primary};
   }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.75rem;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const RightSection = styled.div`
@@ -34,6 +72,10 @@ const RightSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  @media (max-width: 320px) {
+    gap: 0.75rem;
+  }
 `;
 
 const FaqItem = styled.div<{ isOpen: boolean }>`
@@ -53,6 +95,14 @@ const QuestionHeader = styled.div`
   align-items: center;
   padding: 1.563rem;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    padding: 1.25rem;
+  }
+
+  @media (max-width: 320px) {
+    padding: 1rem;
+  }
 `;
 
 const Question = styled.h3`
@@ -62,6 +112,34 @@ const Question = styled.h3`
   color: ${theme.colors.secondary};
   margin: 0;
   flex: 1;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 0.875rem;
+  }
+`;
+
+const Answer = styled.p`
+  font-family: 'Pangram-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  color: ${theme.colors.secondaryTextColor};
+  margin: 0;
+  padding: 0 1.563rem 1.563rem 1.563rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 0.8125rem;
+    padding: 0 1rem 1rem;
+  }
 `;
 
 const IconButton = styled.button`
@@ -103,12 +181,29 @@ const PlusIcon = styled.div<{ $isOpen?: boolean }>`
     left: 50%;
     transform: translateX(-50%) ${props => props.$isOpen ? 'rotate(90deg)' : 'rotate(0deg)'};
   }
+
+  @media (max-width: 768px) {
+    width: 16px;
+    height: 16px;
+
+    &::before {
+      width: 16px;
+    }
+
+    &::after {
+      height: 16px;
+    }
+  }
 `;
 
 const MinusIcon = styled.div`
   width: 24px;
   height: 2px;
   background-color: ${theme.colors.secondary};
+
+  @media (max-width: 768px) {
+    width: 16px;
+  }
 `;
 
 const AnswerContainer = styled.div<{ isOpen: boolean }>`
@@ -117,15 +212,6 @@ const AnswerContainer = styled.div<{ isOpen: boolean }>`
   transition: max-height 0.3s ease;
 `;
 
-const Answer = styled.p`
-  font-family: 'Pangram-Regular', sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 150%;
-  color: ${theme.colors.secondaryTextColor};
-  margin: 0;
-  padding: 0 1.563rem 1.563rem 1.563rem;
-`;
 
 export const Faq = () => {
   const [openItem, setOpenItem] = useState<number | null>(1); // First item open by default

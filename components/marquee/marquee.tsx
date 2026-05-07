@@ -17,6 +17,20 @@ const Wrap = styled.div`
   width: 100%;
   overflow: hidden;
   margin-bottom: 6.25rem;
+
+  @media (max-width: 768px) {
+    padding: 1.25rem 0;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 320px) {
+    padding: 0.75rem 0;
+  }
 `;
 
 const MarqueeContent = styled.div`
@@ -32,6 +46,21 @@ const MarqueeText = styled.span`
   font-size: 1.875rem;
   color: ${theme.colors.secondary};
   margin: 0 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+    margin: 0 1.25rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 0.875rem;
+    margin: 0 0.75rem;
+  }
 `;
 
 const Dot = styled.span`
@@ -39,6 +68,18 @@ const Dot = styled.span`
   color: ${theme.colors.white};
   margin: 0;
   line-height: 1;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 1rem;
+  }
 `;
 
 export const Marquee = () => {
@@ -52,7 +93,6 @@ export const Marquee = () => {
   return (
     <Wrap>
       <MarqueeContent>
-        {/* Repeat the content multiple times for seamless loop */}
         {Array(3).fill(null).map((_, index) => (
           <React.Fragment key={index}>
             {texts.map((text, textIndex) => (

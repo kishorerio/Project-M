@@ -13,6 +13,14 @@ const WhyCourseContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 0 1.125rem;
+  }
+
+  @media (max-width: 320px) {
+    padding: 0 0.75rem;
+  }
 `;
 
 const StickyWrapper = styled.div`
@@ -25,6 +33,12 @@ const StickyWrapper = styled.div`
   align-items: center;
   background-color: ${theme.colors.white};
   z-index: 10;
+
+  @media (max-width: 768px) {
+    height: 100vh;
+    justify-content: center;
+    padding: 2rem 0;
+  }
 `;
 
 const Title = styled.h2`
@@ -38,6 +52,18 @@ const Title = styled.h2`
   .highlight {
     color: ${theme.colors.primary};
   }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.75rem;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const CarouselContainer = styled.div`
@@ -49,6 +75,20 @@ const CarouselContainer = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: 28rem;
+    padding-top: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    height: 24rem;
+  }
+
+  @media (max-width: 320px) {
+    height: 20rem;
+    padding-top: 1rem;
+  }
 `;
 
 const EllipsePath = styled.div`
@@ -62,6 +102,23 @@ const EllipsePath = styled.div`
   left: 50%;
   transform: translateX(-50%);
   clip-path: inset(0 0 50% 0);
+
+  @media (max-width: 768px) {
+    width: 40rem;
+    height: 40rem;
+    top: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  @media (max-width: 320px) {
+    width: 22rem;
+    height: 22rem;
+    top: 1rem;
+  }
 `;
 
 const FadingLine = styled.div`
@@ -79,6 +136,18 @@ const FadingLine = styled.div`
     transparent 100%
   );
   z-index: 5;
+
+  @media (max-width: 768px) {
+    top: 22rem;
+  }
+
+  @media (max-width: 480px) {
+    top: 17rem;
+  }
+
+  @media (max-width: 320px) {
+    top: 12rem;
+  }
 `;
 
 const NumberCircle = styled.div<{ $isActive: boolean; $angle: number }>`
@@ -103,16 +172,50 @@ const NumberCircle = styled.div<{ $isActive: boolean; $angle: number }>`
     rotate(${props => -props.$angle}deg);
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: ${props => props.$isActive ? 10 : 2};
-  
-  ${props => props.$angle === 180 ? `
-    border: 2px solid red !important;
-  ` : ''}
+
+  @media (max-width: 768px) {
+    width: 44px;
+    height: 44px;
+    font-size: 0.875rem;
+    top: 22rem;
+    transform: 
+      translateX(-50%) 
+      translateY(-50%)
+      rotate(${props => props.$angle}deg) 
+      translateY(-20rem) 
+      rotate(${props => -props.$angle}deg);
+  }
+
+  @media (max-width: 480px) {
+    width: 38px;
+    height: 38px;
+    font-size: 0.75rem;
+    top: 17rem;
+    transform: 
+      translateX(-50%) 
+      translateY(-50%)
+      rotate(${props => props.$angle}deg) 
+      translateY(-15rem) 
+      rotate(${props => -props.$angle}deg);
+  }
+
+  @media (max-width: 320px) {
+    width: 32px;
+    height: 32px;
+    font-size: 0.6875rem;
+    top: 12rem;
+    transform: 
+      translateX(-50%) 
+      translateY(-50%)
+      rotate(${props => props.$angle}deg) 
+      translateY(-11rem) 
+      rotate(${props => -props.$angle}deg);
+  }
 `;
 
 const ContentCard = styled.div`
   position: relative;
   z-index: 5;
-  // max-width: 500px;
   text-align: center;
   background-image: url('/Images/bglogo.png');
   background-size: contain;
@@ -120,6 +223,21 @@ const ContentCard = styled.div`
   background-position: center;
   padding: 2rem;
   margin-top: 3.5rem;
+
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+    padding: 1.5rem 1rem;
+    width: 90%;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  @media (max-width: 320px) {
+    padding: 0.75rem 0.5rem;
+  }
 `;
 
 const ContentTitle = styled.h3`
@@ -128,6 +246,19 @@ const ContentTitle = styled.h3`
   font-weight: 700;
   color: ${theme.colors.textColor};
   margin: 0 0 2.688rem 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 1.125rem;
+  }
 `;
 
 const ContentDescription = styled.p`
@@ -136,6 +267,16 @@ const ContentDescription = styled.p`
   color: #525252;
   margin: 0 0 3.5rem 0;
   line-height: 1.6;
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+    margin: 0 0 1.5rem 0;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 0.8125rem;
+    margin: 0 0 1rem 0;
+  }
 `;
 
 const ProgressText = styled.p`
@@ -143,6 +284,11 @@ const ProgressText = styled.p`
   font-size: 1rem;
   color: #525252;
   margin: 5.875rem 0 0 0;
+
+  @media (max-width: 768px) {
+    margin: 1rem 0 0 0;
+    font-size: 0.875rem;
+  }
 `;
 
 interface CourseItem {
@@ -185,15 +331,13 @@ export const WhyCourse = () => {
     }
   ];
 
-  // Calculate angle for each circle based on scroll
   const getCircleAngle = (index: number) => {
     const totalNumbers = courseItems.length;
-    const baseAngle = (index * 180) / (totalNumbers - 1); // Initial positions across 180 degrees
-    const activeAngle = (activeIndex * 180) / (totalNumbers - 1); // Current active position
-    const targetAngle = 1; // Top center position
-    const rotationOffset = activeAngle - targetAngle; // How much to rotate to bring active to center
-    
-    return baseAngle - rotationOffset; // Rotate all numbers so active is at top center
+    const baseAngle = (index * 180) / (totalNumbers - 1);
+    const activeAngle = (activeIndex * 180) / (totalNumbers - 1);
+    const targetAngle = 1;
+    const rotationOffset = activeAngle - targetAngle;
+    return baseAngle - rotationOffset;
   };
 
   useEffect(() => {
@@ -204,22 +348,18 @@ export const WhyCourse = () => {
       const windowHeight = window.innerHeight;
       const containerHeight = containerRef.current.offsetHeight;
       
-      // Calculate scroll progress based on how much of the container has been scrolled
       const scrolled = Math.max(0, -rect.top);
       const maxScroll = containerHeight - windowHeight;
       const progress = Math.min(scrolled / maxScroll, 1);
       
-      // Divide scroll into equal sections for each step
       const sectionSize = 1 / courseItems.length;
       const currentSection = Math.floor(progress / sectionSize);
       const newTargetIndex = Math.min(currentSection, courseItems.length - 1);
       
-      // Only update targetIndex if it's different
       if (newTargetIndex !== targetIndex) {
         setTargetIndex(newTargetIndex);
       }
       
-      // Update scroll progress for smooth transitions
       setScrollProgress(progress * (courseItems.length - 1));
     };
 
@@ -234,22 +374,20 @@ export const WhyCourse = () => {
       }
     };
 
-    throttledScroll(); // Initial call
+    throttledScroll();
     window.addEventListener('scroll', throttledScroll);
     return () => window.removeEventListener('scroll', throttledScroll);
   }, [courseItems.length, targetIndex]);
 
-  // Animate activeIndex to targetIndex step by step
   useEffect(() => {
     if (targetIndex !== activeIndex) {
       const timer = setTimeout(() => {
         if (targetIndex > activeIndex) {
-          setActiveIndex(prev => prev + 1); // Always increment by 1
+          setActiveIndex(prev => prev + 1);
         } else if (targetIndex < activeIndex) {
-          setActiveIndex(prev => prev - 1); // Always decrement by 1
+          setActiveIndex(prev => prev - 1);
         }
-      }, 500); // Increased delay for better visibility and control
-
+      }, 500);
       return () => clearTimeout(timer);
     }
   }, [targetIndex, activeIndex]);
@@ -265,6 +403,7 @@ export const WhyCourse = () => {
           <EllipsePath />
           <FadingLine />
           
+          {/* Numbers on ellipse */}
           {courseItems.map((item, index) => {
             const angle = getCircleAngle(index);
             return (

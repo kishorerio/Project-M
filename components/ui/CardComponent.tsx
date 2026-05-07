@@ -21,7 +21,25 @@ const Card = styled.div`
   justify-content: space-between;
   gap: 1rem;
   min-width: 350px;
+  height: 24.8125rem;
   margin-right: 2rem;
+
+  @media (max-width: 768px) {
+    min-width: 280px;
+    margin-right: 1rem;
+    padding: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    min-width: 240px;
+    margin-right: 0.75rem;
+  }
+
+  @media (max-width: 320px) {
+    min-width: 200px;
+    margin-right: 0.5rem;
+    padding: 0.75rem;
+  }
 `;
 
 const ProfileSection = styled.div`
@@ -29,6 +47,10 @@ const ProfileSection = styled.div`
   align-items: flex-start;
   gap: 1.25rem;
   margin-bottom: 2.188rem;
+
+  @media (max-width: 580px) {
+    margin-bottom: 0.75rem;
+  }
 `;
 
 const ProfileInfo = styled.div`
@@ -44,6 +66,10 @@ const ContentWrap = styled.div`
   gap: 0.5rem;
   flex: 1;
   margin-bottom: 3.188rem;
+
+  @media (max-width: 580px) {
+    margin-bottom: 1rem;
+  }
 `;
 
 const ProfileImage = styled(Image)`
@@ -52,6 +78,11 @@ const ProfileImage = styled(Image)`
   flex-shrink: 0;
   width: 62px;
   height: 62px;
+
+  @media (max-width: 580px) {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
 `;
 
 const Name = styled.h3`
@@ -60,6 +91,10 @@ const Name = styled.h3`
   font-size: 1.125rem;
   color: ${theme.colors.secondary};
   margin: 0;
+
+  @media (max-width: 580px) {
+    font-size: 1rem;
+  }
 `;
 
 const Role = styled.p`
@@ -68,6 +103,10 @@ const Role = styled.p`
   font-size: 1rem;
   color: ${theme.colors.secondaryTextColor};
   margin: 0;
+
+  @media (max-width: 580px) {
+    font-size: 0.875rem;
+  }
 `;
 
 const Subject = styled.p`
@@ -76,6 +115,10 @@ const Subject = styled.p`
   font-size: 1rem;
   color: ${theme.colors.secondary};
   margin: 0;
+
+  @media (max-width: 580px) {
+    font-size: 1rem;
+  }
 `;
 
 const ReviewText = styled.p`
@@ -85,6 +128,15 @@ const ReviewText = styled.p`
   color: ${theme.colors.secondaryTextColor};
   line-height: 150%;
   margin: 0.5rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: 580px) {
+    font-size: 0.875rem;
+  }
 `;
 
 const Stars = styled.div`

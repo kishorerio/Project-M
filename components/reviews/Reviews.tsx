@@ -18,19 +18,38 @@ const ReviewsContainer = styled.div`
   overflow: hidden;
   padding: 2rem 0;
   margin-bottom: 6.25rem;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 0;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 320px) {
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+  }
 `;
 
 const Title = styled.h2`
-  font-family: 'Pangram-Medium', sans-serif;
-  font-weight: 400;
+  font-family: 'Pangram-Regular', sans-serif;
+  font-weight: 600;
   font-size: 3.375rem;
   line-height: 120%;
   color: ${theme.colors.secondary};
-  text-align: left;
-  margin: 0 2.5rem 2.875rem 2.5rem;
+  margin: 0 0 2.6rem 2.5rem;
 
   span {
     color: ${theme.colors.primary};
+  }
+
+  @media (max-width: 960px) {
+    font-size: 1.75rem;
+    margin: 0 1rem 1.25rem;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 1.5rem;
+    margin: 0 0.75rem 1rem;
   }
 `;
 
