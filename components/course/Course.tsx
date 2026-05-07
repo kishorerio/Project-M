@@ -127,7 +127,7 @@ const CourseCard = styled.div `
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  padding: 1.25rem;
+  padding: 2.188rem 1.625rem;
   background-color: ${
     theme.colors.white
 };
@@ -143,8 +143,8 @@ const CourseCard = styled.div `
 `;
 
 const CourseNumber = styled.div `
-  min-width: 48px;
-  height: 48px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   background: radial-gradient(70.69% 70.69% at 50% 50%, #7447CF 30%, #4A1CBB 100%);
   color: ${

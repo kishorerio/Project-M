@@ -125,7 +125,6 @@ const ModuleContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  flex: 1;
 
   @media (max-width: 768px) {
     display: none;

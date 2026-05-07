@@ -81,7 +81,7 @@ const FooterColumn = styled.div`
 const FooterLink = styled.a`
   font-family: 'Pangram-Medium', sans-serif;
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: ${theme.colors.white};
   text-decoration: none;
   cursor: pointer;
@@ -121,7 +121,7 @@ const ContactInfo = styled.div`
 const ContactText = styled.p`
   font-family: 'Pangram-Medium', sans-serif;
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: ${theme.colors.white};
   margin: 0;
   display: flex;
