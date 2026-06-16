@@ -20,7 +20,7 @@ const NavContainer = styled.nav<{ $isVisible: boolean }>`
   width: calc(100% - 19.876rem);
   margin: 0 9.938rem;
   position: fixed;
-  top: ${props => props.$isVisible ? '3.875rem' : '-100px'};
+  top: ${props => props.$isVisible ? '1.875rem' : '-100px'};
   z-index: 1000;
   transition: top 0.3s ease-in-out;
 
@@ -180,6 +180,8 @@ const Nav = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  const WHATSAPP_URL = 'https://wa.me/919834877006';
+
   const scrollToSection = (sectionId: string) => {
     setIsSidebarOpen(false);
     setTimeout(() => {
@@ -238,7 +240,7 @@ const Nav = () => {
           <NavLink onClick={() => scrollToSection('hero')}>Home</NavLink>
           <NavLink onClick={() => scrollToSection('course')}>About Course</NavLink>
           <NavLink onClick={() => scrollToSection('programs')}>Modules</NavLink>
-          <NavLink onClick={() => scrollToSection('contact')}>Contact Us</NavLink>
+          <NavLink href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Contact Us</NavLink>
         </NavLinks>
 
         <DesktopButton>
@@ -248,7 +250,7 @@ const Nav = () => {
             textColor={theme.colors.secondary}
             iconSrc="/Logo/whatsappLogo.svg"
             iconAlt="WhatsApp"
-            onClick={() => scrollToSection('contact')}
+            onClick={() => window.open(WHATSAPP_URL, '_blank', 'noopener,noreferrer')}
             width='10rem'
           />
         </DesktopButton>
@@ -282,7 +284,7 @@ const Nav = () => {
           <SidebarLink onClick={() => scrollToSection('hero')}>Home</SidebarLink>
           <SidebarLink onClick={() => scrollToSection('course')}>About Course</SidebarLink>
           <SidebarLink onClick={() => scrollToSection('programs')}>Modules</SidebarLink>
-          <SidebarLink onClick={() => scrollToSection('contact')}>Contact Us</SidebarLink>
+          <SidebarLink href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Contact Us</SidebarLink>
         </SidebarLinks>
 
         <Button
@@ -291,7 +293,7 @@ const Nav = () => {
           textColor={theme.colors.secondary}
           iconSrc="/Logo/whatsappLogo.svg"
           iconAlt="WhatsApp"
-          onClick={() => scrollToSection('contact')}
+          onClick={() => window.open(WHATSAPP_URL, '_blank', 'noopener,noreferrer')}
           width='100%'
         />
       </Sidebar>

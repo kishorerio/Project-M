@@ -1,10 +1,12 @@
+'use client';
+
 import theme from '@/theme/theme';
 import React from 'react';
 import styled from 'styled-components';
 import Button from '../ui/Button';
 
 const HeroContainer = styled.div `
-  height: 140vh;
+  height: 110vh;
   background-image: url('/Images/Bg.png');
   background-size: cover;
   background-position: center;
@@ -55,7 +57,7 @@ const BlueIcon = styled(FloatingIcon)`
 
 const KaaviIcon = styled(FloatingIcon)`
   left: 10%;
-  bottom: 10%;
+  bottom: 20%;
   width: 11.078rem;
   height: 4rem;
   animation-delay: 1s;
@@ -131,6 +133,8 @@ const SubTitle = styled.p `
   }
 `;
 
+const WHATSAPP_URL = 'https://wa.me/919834877006';
+
 const HeroPage = () => {
     return (
         <HeroContainer>
@@ -156,7 +160,7 @@ const HeroPage = () => {
                     }
                     iconSrc="/Logo/whatsappLogo.svg"
                     iconAlt="WhatsApp"
-                    
+                    onClick={() => window.open(WHATSAPP_URL, '_blank', 'noopener,noreferrer')}
                     width='19.063rem'/>
             </TextWrap>
         </HeroContainer>

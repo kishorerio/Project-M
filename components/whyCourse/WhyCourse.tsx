@@ -428,7 +428,7 @@ export const WhyCourse = () => {
               width="100%"
               iconSrc="/Logo/whatsappLogo.svg"
               iconAlt="WhatsApp"
-              onClick={() => console.log('Book call clicked')}
+              onClick={() => window.open('https://wa.me/919834877006', '_blank', 'noopener,noreferrer')}
             />
             
             <ProgressText>

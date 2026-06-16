@@ -271,7 +271,7 @@ export const CareerContact = () => {
             iconSrc="/Logo/whatsapp-color.svg"
             iconAlt="WhatsApp"
             width="100%"
-            onClick={() => console.log('Contact Us clicked')}
+            onClick={() => window.open('https://wa.me/919834877006', '_blank', 'noopener,noreferrer')}
           />
         </ButtonWrapper>
       </LeftSection>

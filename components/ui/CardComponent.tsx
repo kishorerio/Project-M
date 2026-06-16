@@ -144,8 +144,8 @@ const Stars = styled.div`
   gap: 0.25rem;
 `;
 
-const Star = styled.span<{ filled: boolean }>`
-  color: ${props => props.filled ? theme.colors.primary : '#E0E0E0'};
+const Star = styled.span<{ $filled: boolean }>`
+  color: ${props => props.$filled ? theme.colors.primary : '#E0E0E0'};
   font-size: 1.25rem;
 `;
 
@@ -159,7 +159,7 @@ export const CardComponent: React.FC<CardProps> = ({
 }) => {
   const renderStars = () => {
     return Array.from({ length: 5 }, (_, index) => (
-      <Star key={index} filled={index < rating}>
+      <Star key={index} $filled={index < rating}>
         ★
       </Star>
     ));

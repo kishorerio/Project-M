@@ -172,6 +172,8 @@ const MobileDivider = styled.div`
 `;
 
 export const Footer = () => {
+    const WHATSAPP_URL = 'https://wa.me/919834877006';
+
     const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -233,7 +235,7 @@ export const Footer = () => {
                         width="100%"
                         iconSrc="/Logo/whatsappLogo.svg"
                         iconAlt="WhatsApp"
-                        onClick={() => scrollToSection('contact')}/>
+                        onClick={() => window.open(WHATSAPP_URL, '_blank', 'noopener,noreferrer')}/>
                 </RightSection>
             </FooterContent>
             
