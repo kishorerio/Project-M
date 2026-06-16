@@ -18,9 +18,10 @@ const HeroContainer = styled.div `
   padding-top: 80px;
   position: relative;
   overflow: hidden;
-
+  
   @media (max-width: 768px) {
-    margin: -80px 1.125rem 0 1.125rem;
+    height: 120vh;
+    margin: -40px 1.125rem 0 1.125rem;
   }
 `;
 
@@ -47,11 +48,11 @@ const BlueIcon = styled(FloatingIcon)`
   animation-delay: 0s;
 
   @media (max-width: 768px) {
-    width: 166px;
+    width: 136px;
     height: 50px;
     left: 4%;
     top: auto;
-    bottom: 10%;
+    bottom: 25%;
   }
 `;
 
@@ -63,12 +64,12 @@ const KaaviIcon = styled(FloatingIcon)`
   animation-delay: 1s;
 
   @media (max-width: 768px) {
-    width: 166px;
+    width: 136px;
     height: 50px;
     left: auto;
     right: 2%;
     bottom: auto;
-    top: 25%;
+    top: 20%;
   }
 `;
 
@@ -80,10 +81,10 @@ const GreenIcon = styled(FloatingIcon)`
   animation-delay: 0.5s;
 
   @media (max-width: 768px) {
-    width: 166px;
+    width: 136px;
     height: 50px;
     left: 0;
-    top: 22%;
+    top: 20%;
   }
 `;
 
@@ -115,6 +116,9 @@ const Title = styled.h1 `
   @media (max-width: 768px) {
     font-size: 2.5rem;
   }
+  @media (max-width: 580px) {
+    font-size: 2.1rem;
+  }
 `;
 
 const SubTitle = styled.p `
@@ -129,7 +133,14 @@ const SubTitle = styled.p `
   padding: 0 1rem;
 
   @media (max-width: 768px) {
-    font-size: 0.875rem;
+    font-size: 0.85rem;
+  }
+`;
+
+const ButtonWrapper = styled.div`
+  @media (max-width: 580px) {
+    margin-top: 2.6rem;
+    width: 100%;
   }
 `;
 
@@ -151,6 +162,7 @@ const HeroPage = () => {
                     {' '}
                     in 8 Weeks</Title>
                 <SubTitle>No fluff. Just practical skills, real projects, and AI-powered tools to help you break into the design industry.</SubTitle>
+                <ButtonWrapper>
                 <Button text="Book My Free Career Call"
                     bgColor={
                         theme.colors.primary
@@ -162,6 +174,7 @@ const HeroPage = () => {
                     iconAlt="WhatsApp"
                     onClick={() => window.open(WHATSAPP_URL, '_blank', 'noopener,noreferrer')}
                     width='19.063rem'/>
+                </ButtonWrapper>
             </TextWrap>
         </HeroContainer>
     );

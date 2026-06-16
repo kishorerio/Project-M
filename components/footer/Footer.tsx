@@ -204,11 +204,11 @@ export const Footer = () => {
 
                 <MiddleSection>
                     <FooterColumn>
-                        <FooterLink href="https://linkedin.com" target="_blank">
+                        <FooterLink href="https://www.linkedin.com/in/designedbymanoj/" target="_blank" rel="noopener noreferrer">
                             <SocialIcon src="/Logo/linkedin.svg" alt="LinkedIn" />
                             LinkedIn
                         </FooterLink>
-                        <FooterLink href="https://instagram.com" target="_blank">
+                        <FooterLink href="https://www.instagram.com/designedby_manoj?igsh=MWkxNHhudHN3ZDJ4NA==" target="_blank" rel="noopener noreferrer">
                             <SocialIcon src="/Logo/insta.svg" alt="Instagram" />
                             Instagram
                         </FooterLink>
