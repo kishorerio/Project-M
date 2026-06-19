@@ -20,7 +20,7 @@ const HeroContainer = styled.div `
   overflow: hidden;
   
   @media (max-width: 768px) {
-    height: 120vh;
+    height: 110vh;
     margin: -40px 1.125rem 0 1.125rem;
   }
 `;
