@@ -149,7 +149,7 @@ const SubTitle = styled.p `
 `;
 
 const ButtonWrapper = styled.div `
-  @media (max-width: 580px) {
+  @media (max-width: 360px) {
     margin-top: 2.6rem;
     width: 100%;
   }
