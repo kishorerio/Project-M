@@ -56,6 +56,27 @@ const BlueIcon = styled(FloatingIcon)`
     height: 50px;
     left: 4%;
     top: auto;
+    bottom: 16%;
+  }
+  @media (max-width: 580px) {
+    width: 130px;
+    height: 50px;
+    left: 4%;
+    top: auto;
+    bottom: 16%;
+  }
+  @media (max-width: 480px) {
+    width: 130px;
+    height: 50px;
+    left: 4%;
+    top: auto;
+    bottom: 8%;
+  }
+  @media (max-width: 380px) {
+    width: 130px;
+    height: 50px;
+    left: 4%;
+    top: auto;
     bottom: 25%;
   }
 `;
