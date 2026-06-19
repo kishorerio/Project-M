@@ -199,8 +199,9 @@ const DescriptionSection = styled.div`
 `;
 
 const Title = styled.h2`
-  font-family: 'Pangram-Regular', sans-serif;
-  font-weight: 600;
+  font-family: 'Rightgrotesk-widemedium', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 500;
   font-size: 3.375rem;
   line-height: 120%;
   color: ${theme.colors.secondary};
@@ -315,10 +316,10 @@ export const MentorProfile = () => {
         </Description>
 
         <SocialLinks>
-          <SocialIcon href="#" target="_blank">
+          <SocialIcon href="https://www.instagram.com/designedby_manoj?igsh=MWkxNHhudHN3ZDJ4NA==" target="_blank" rel="noopener noreferrer">
             <Image src="/Logo/insta.svg" alt="Instagram" width={40} height={40} />
           </SocialIcon>
-          <SocialIcon href="#" target="_blank">
+          <SocialIcon href="https://www.linkedin.com/in/designedbymanoj/" target="_blank" rel="noopener noreferrer">
             <Image src="/Logo/linkedin.svg" alt="LinkedIn" width={40} height={40} />
           </SocialIcon>
         </SocialLinks>
@@ -340,10 +341,10 @@ export const MentorProfile = () => {
         </Description>
 
         <SocialLinks>
-          <SocialIcon href="#" target="_blank">
+          <SocialIcon href="https://www.instagram.com/designedby_manoj?igsh=MWkxNHhudHN3ZDJ4NA==" target="_blank" rel="noopener noreferrer">
             <Image src="/Logo/insta.svg" alt="Instagram" width={40} height={40} />
           </SocialIcon>
-          <SocialIcon href="#" target="_blank">
+          <SocialIcon href="https://www.linkedin.com/in/designedbymanoj/" target="_blank" rel="noopener noreferrer">
             <Image src="/Logo/linkedin.svg" alt="LinkedIn" width={40} height={40} />
           </SocialIcon>
         </SocialLinks>

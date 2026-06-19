@@ -4,17 +4,34 @@ import styled from 'styled-components'
 import theme from '../../theme/theme'
 import Button from '../ui/Button'
 
-const ProgramsContainer = styled.section`
-  background-color: ${theme.colors.white};
-  margin: 0 2.5rem;
-  margin-bottom: 10rem;
-
+const Wrap = styled.section `
+ margin-bottom: 10rem;
+ margin: 0 2.5rem;
   @media (max-width: 768px) {
     margin: 0 1.125rem 5rem;
   }
 `;
 
-const Header = styled.div`
+const ProgramsWrapper = styled.div `
+  position: relative;
+`;
+
+const ProgramsContainer = styled.section `
+  background-color: ${
+    theme.colors.white
+};
+`;
+
+const FadeImage = styled.img `
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+`;
+
+const Header = styled.div `
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -25,16 +42,21 @@ const Header = styled.div`
   }
 `;
 
-const Title = styled.h2`
-  font-family: 'Pangram-Bold', sans-serif;
+const Title = styled.h2 `
+  font-family: 'Rightgrotesk-widemedium', sans-serif;
+  letter-spacing: 0.5px;
   font-size: 3rem;
   font-weight: 400;
-  color: ${theme.colors.textColor};
+  color: ${
+    theme.colors.textColor
+};
   margin: 0;
   line-height: 1.2;
   
   .highlight {
-    color: ${theme.colors.primary};
+    color: ${
+    theme.colors.primary
+};
   }
 
   @media (max-width: 768px) {
@@ -46,13 +68,13 @@ const Title = styled.h2`
   }
 `;
 
-const TopButtonWrapper = styled.div`
+const TopButtonWrapper = styled.div `
   @media (max-width: 768px) {
     display: none;
   }
 `;
 
-const ModuleList = styled.div`
+const ModuleList = styled.div `
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -62,21 +84,29 @@ const ModuleList = styled.div`
   }
 `;
 
-const ModuleCard = styled.div<{ $isHighlighted?: boolean }>`
+const ModuleCard = styled.div < {
+    $isHighlighted?: boolean
+} > `
   display: flex;
   align-items: start;
   justify-content: space-between;
   gap: 2rem;
   padding: 1.6rem 1.7rem;
-  background: ${props => props.$isHighlighted ? theme.colors.primary : theme.colors.white};
-  border: 1.5px solid ${props => props.$isHighlighted ? theme.colors.primary : '#CCC3E2'};
+  background: ${
+    props => props.$isHighlighted ? theme.colors.primary : theme.colors.white
+};
+  border: 1.5px solid ${
+    props => props.$isHighlighted ? theme.colors.primary : '#CCC3E2'
+};
   border-radius: 1.25rem;
   transition: all 0.3s ease;
   cursor: pointer;
 
   &:hover {
     background: linear-gradient(80.86deg, #93E46E -10%, #FFFFFF 100%);
-    border-color: ${theme.colors.primary};
+    border-color: ${
+    theme.colors.primary
+};
   }
 
   @media (max-width: 768px) {
@@ -86,7 +116,7 @@ const ModuleCard = styled.div<{ $isHighlighted?: boolean }>`
   }
 `;
 
-const ModuleTopRow = styled.div`
+const ModuleTopRow = styled.div `
   display: none;
 
   @media (max-width: 768px) {
@@ -97,10 +127,14 @@ const ModuleTopRow = styled.div`
   }
 `;
 
-const ModuleNumber = styled.div<{ $isHighlighted?: boolean }>`
+const ModuleNumber = styled.div < {
+    $isHighlighted?: boolean
+} > `
   font-family: 'Pangram-Bold', sans-serif;
   font-size: 1.125rem;
-  color: ${props => props.$isHighlighted ? theme.colors.white : theme.colors.textColor};
+  color: ${
+    props => props.$isHighlighted ? theme.colors.white : theme.colors.textColor
+};
   align-self: center;
 
   @media (max-width: 768px) {
@@ -110,18 +144,22 @@ const ModuleNumber = styled.div<{ $isHighlighted?: boolean }>`
   }
 `;
 
-const MobileModuleNumber = styled.div<{ $isHighlighted?: boolean }>`
+const MobileModuleNumber = styled.div < {
+    $isHighlighted?: boolean
+} > `
   display: none;
   font-family: 'Pangram-Bold', sans-serif;
   font-size: 0.875rem;
-  color: ${props => props.$isHighlighted ? theme.colors.white : theme.colors.textColor};
+  color: ${
+    props => props.$isHighlighted ? theme.colors.white : theme.colors.textColor
+};
 
   @media (max-width: 768px) {
     display: block;
   }
 `;
 
-const ModuleContent = styled.div`
+const ModuleContent = styled.div `
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -132,7 +170,7 @@ const ModuleContent = styled.div`
   }
 `;
 
-const MobileModuleContent = styled.div`
+const MobileModuleContent = styled.div `
   display: none;
   flex-direction: column;
   gap: 1rem;
@@ -143,10 +181,14 @@ const MobileModuleContent = styled.div`
   }
 `;
 
-const ModuleTitle = styled.h3<{ $isHighlighted?: boolean }>`
+const ModuleTitle = styled.h3 < {
+    $isHighlighted?: boolean
+} > `
   font-family: 'Pangram-Bold', sans-serif;
   font-size: 1.25rem;
-  color: ${props => props.$isHighlighted ? theme.colors.white : theme.colors.textColor};
+  color: ${
+    props => props.$isHighlighted ? theme.colors.white : theme.colors.textColor
+};
   margin: 0 0 1rem 0;
   line-height: 140%;
   width: 90%;
@@ -158,7 +200,7 @@ const ModuleTitle = styled.h3<{ $isHighlighted?: boolean }>`
   }
 `;
 
-const ModuleDetails = styled.div`
+const ModuleDetails = styled.div `
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -168,20 +210,24 @@ const ModuleDetails = styled.div`
   }
 `;
 
-const DetailItem = styled.div<{ $isHighlighted?: boolean }>`
+const DetailItem = styled.div < {
+    $isHighlighted?: boolean
+} > `
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-family: 'Pangram-Medium', sans-serif;
   font-size: 0.875rem;
-  color: ${props => props.$isHighlighted ? theme.colors.white : '#666'};
+  color: ${
+    props => props.$isHighlighted ? theme.colors.white : '#666'
+};
 
   @media (max-width: 768px) {
     font-size: 0.875rem;
   }
 `;
 
-const Icon = styled.img`
+const Icon = styled.img `
   width: 16px;
   height: 16px;
 
@@ -191,10 +237,14 @@ const Icon = styled.img`
   }
 `;
 
-const ArrowIcon = styled.img<{ $isHighlighted?: boolean }>`
+const ArrowIcon = styled.img < {
+    $isHighlighted?: boolean
+} > `
   width: 0.875rem;
   height: 0.875rem;
-  filter: ${props => props.$isHighlighted ? 'brightness(0) invert(1)' : 'none'};
+  filter: ${
+    props => props.$isHighlighted ? 'brightness(0) invert(1)' : 'none'
+};
 
   @media (max-width: 768px) {
     width: 0.75rem;
@@ -209,10 +259,10 @@ const DesktopArrow = styled(ArrowIcon)`
   }
 `;
 
-const BottomButtonWrapper = styled.div`
+const BottomButtonWrapper = styled.div `
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 0rem;
 
   @media (max-width: 768px) {
     margin-top: 1.5rem;
@@ -220,151 +270,191 @@ const BottomButtonWrapper = styled.div`
 `;
 
 interface ModuleData {
-  id: number;
-  number: string;
-  title: string;
-  liveClasses: number;
-  activities: number;
-  isHighlighted?: boolean;
+    id: number;
+    number: string;
+    title: string;
+    liveClasses: number;
+    activities: number;
+    isHighlighted?: boolean;
 }
 
 export const Programs = () => {
-  const modulesData: ModuleData[] = [
-    {
-      id: 1,
-      number: 'Module 1',
-      title: 'UX Foundations & the AI-Augmented Designer\'s Mindset',
-      liveClasses: 5,
-      activities: 0,
-      isHighlighted: false
-    },
-    {
-      id: 2,
-      number: 'Module 2',
-      title: 'User Research in the Age of AI: Methods & Synthesis',
-      liveClasses: 5,
-      activities: 0,
-      isHighlighted: false
-    },
-    {
-      id: 3,
-      number: 'Module 3',
-      title: 'Information Architecture & AI-Assisted Content Strategy',
-      liveClasses: 5,
-      activities: 0,
-      isHighlighted: false
-    },
-    {
-      id: 4,
-      number: 'Module 4',
-      title: 'Interaction Design, Micro-Interactions & Motion Principles',
-      liveClasses: 5,
-      activities: 0,
-      isHighlighted: false
-    },
-    {
-      id: 5,
-      number: 'Module 5',
-      title: 'Rapid Prototyping with Generative & AI-Powered Tools',
-      liveClasses: 5,
-      activities: 0,
-      isHighlighted: false
-    }
-  ];
+    const modulesData: ModuleData[] = [
+        {
+            id: 1,
+            number: 'Module 1',
+            title: 'UX Foundations & the AI-Augmented Designer\'s Mindset',
+            liveClasses: 5,
+            activities: 0,
+            isHighlighted: false
+        },
+        {
+            id: 2,
+            number: 'Module 2',
+            title: 'User Research in the Age of AI: Methods & Synthesis',
+            liveClasses: 5,
+            activities: 0,
+            isHighlighted: false
+        },
+        {
+            id: 3,
+            number: 'Module 3',
+            title: 'Information Architecture & AI-Assisted Content Strategy',
+            liveClasses: 5,
+            activities: 0,
+            isHighlighted: false
+        },
+        {
+            id: 4,
+            number: 'Module 4',
+            title: 'Interaction Design, Micro-Interactions & Motion Principles',
+            liveClasses: 5,
+            activities: 0,
+            isHighlighted: false
+        }, {
+            id: 5,
+            number: 'Module 5',
+            title: 'Rapid Prototyping with Generative & AI-Powered Tools',
+            liveClasses: 5,
+            activities: 0,
+            isHighlighted: false
+        }
+    ];
 
-  return (
-    <ProgramsContainer>
-      <Header>
-        <Title>
-          <span className="highlight">Program</span> of the course<br />
-          is 8 Module
-        </Title>
-        <TopButtonWrapper>
-          <Button 
-            text="Download Syllabus"
-            bgColor={theme.colors.primary}
-            textColor={theme.colors.secondary}
-            width="267px"
-            onClick={() => console.log('Download syllabus clicked')}
-          />
-        </TopButtonWrapper>
-      </Header>
+    return (
 
-      <ModuleList>
-        {modulesData.map((module) => (
-          <ModuleCard key={module.id} $isHighlighted={module.isHighlighted}>
+        <Wrap>
+            <ProgramsWrapper>
+                <ProgramsContainer>
+                    <Header>
+                        <Title>
+                            <span className="highlight">Program</span>
+                            of the course<br/>
+                            is 8 Module
+                        </Title>
+                        <TopButtonWrapper>
+                            <Button text="Download Syllabus"
+                                bgColor={
+                                    theme.colors.primary
+                                }
+                                textColor={
+                                    theme.colors.secondary
+                                }
+                                width="267px"
+                                onClick={
+                                    () => console.log('Download syllabus clicked')
+                                }/>
+                        </TopButtonWrapper>
+                    </Header>
 
-            {/* Desktop layout */}
-            <ModuleNumber $isHighlighted={module.isHighlighted}>
-              {module.number}
-            </ModuleNumber>
-            
-            <ModuleContent>
-              <ModuleTitle $isHighlighted={module.isHighlighted}>
-                {module.title}
-              </ModuleTitle>
-              <ModuleDetails>
-                <DetailItem $isHighlighted={module.isHighlighted}>
-                  <Icon src="/Logo/videoIcon.svg" alt="Video" />
-                  {module.liveClasses} Live Classes
-                </DetailItem>
-                <DetailItem $isHighlighted={module.isHighlighted}>
-                  <Icon src="/Logo/bookIcon.svg" alt="Activities" />
-                  Activities
-                </DetailItem>
-              </ModuleDetails>
-            </ModuleContent>
-            
-            <DesktopArrow 
-              src="/Logo/arrow.svg" 
-              alt="Arrow" 
-              $isHighlighted={module.isHighlighted}
-            />
+                    <ModuleList> {
+                        modulesData.map((module) => (
+                            <ModuleCard key={
+                                    module.id
+                                }
+                                $isHighlighted={
+                                    module.isHighlighted
+                            }>
 
-            {/* Mobile: top row with number + arrow */}
-            <ModuleTopRow>
-              <MobileModuleNumber $isHighlighted={module.isHighlighted}>
-                {module.number}
-              </MobileModuleNumber>
-              <ArrowIcon 
-                src="/Logo/arrow.svg" 
-                alt="Arrow" 
-                $isHighlighted={module.isHighlighted}
-              />
-            </ModuleTopRow>
+                                {/* Desktop layout */}
+                                <ModuleNumber $isHighlighted={
+                                    module.isHighlighted
+                                }>
+                                    {
+                                    module.number
+                                } </ModuleNumber>
 
-            {/* Mobile: content below top row */}
-            <MobileModuleContent>
-              <ModuleTitle $isHighlighted={module.isHighlighted}>
-                {module.title}
-              </ModuleTitle>
-              <ModuleDetails>
-                <DetailItem $isHighlighted={module.isHighlighted}>
-                  <Icon src="/Logo/videoIcon.svg" alt="Video" />
-                  {module.liveClasses} Live Classes
-                </DetailItem>
-                <DetailItem $isHighlighted={module.isHighlighted}>
-                  <Icon src="/Logo/bookIcon.svg" alt="Activities" />
-                  Activities
-                </DetailItem>
-              </ModuleDetails>
-            </MobileModuleContent>
+                                <ModuleContent>
+                                    <ModuleTitle $isHighlighted={
+                                        module.isHighlighted
+                                    }>
+                                        {
+                                        module.title
+                                    } </ModuleTitle>
+                                    <ModuleDetails>
+                                        <DetailItem $isHighlighted={
+                                            module.isHighlighted
+                                        }>
+                                            <Icon src="/Logo/videoIcon.svg" alt="Video"/> {
+                                            module.liveClasses
+                                        }
+                                            Live Classes
+                                        </DetailItem>
+                                        <DetailItem $isHighlighted={
+                                            module.isHighlighted
+                                        }>
+                                            <Icon src="/Logo/bookIcon.svg" alt="Activities"/>
+                                            Activities
+                                        </DetailItem>
+                                    </ModuleDetails>
+                                </ModuleContent>
 
-          </ModuleCard>
-        ))}
-      </ModuleList>
+                                <DesktopArrow src="/Logo/arrow.svg" alt="Arrow"
+                                    $isHighlighted={
+                                        module.isHighlighted
+                                    }/> {/* Mobile: top row with number + arrow */}
+                                <ModuleTopRow>
+                                    <MobileModuleNumber $isHighlighted={
+                                        module.isHighlighted
+                                    }>
+                                        {
+                                        module.number
+                                    } </MobileModuleNumber>
+                                    <ArrowIcon src="/Logo/arrow.svg" alt="Arrow"
+                                        $isHighlighted={
+                                            module.isHighlighted
+                                        }/>
+                                </ModuleTopRow>
 
-      <BottomButtonWrapper>
-        <Button 
-          text="Download Syllabus"
-          bgColor={theme.colors.primary}
-          textColor={theme.colors.secondary}
-          width="562px"
-          onClick={() => console.log('Download syllabus clicked')}
-        />
-      </BottomButtonWrapper>
-    </ProgramsContainer>
-  )
+                                {/* Mobile: content below top row */}
+                                <MobileModuleContent>
+                                    <ModuleTitle $isHighlighted={
+                                        module.isHighlighted
+                                    }>
+                                        {
+                                        module.title
+                                    } </ModuleTitle>
+                                    <ModuleDetails>
+                                        <DetailItem $isHighlighted={
+                                            module.isHighlighted
+                                        }>
+                                            <Icon src="/Logo/videoIcon.svg" alt="Video"/> {
+                                            module.liveClasses
+                                        }
+                                            Live Classes
+                                        </DetailItem>
+                                        <DetailItem $isHighlighted={
+                                            module.isHighlighted
+                                        }>
+                                            <Icon src="/Logo/bookIcon.svg" alt="Activities"/>
+                                            Activities
+                                        </DetailItem>
+                                    </ModuleDetails>
+                                </MobileModuleContent>
+
+                            </ModuleCard>
+                        ))
+                    } </ModuleList>
+
+                    <FadeImage src="/Images/fade.png" alt="" aria-hidden="true"/>
+                </ProgramsContainer>
+
+            </ProgramsWrapper>
+            <BottomButtonWrapper>
+                <Button text="Download Syllabus"
+                    bgColor={
+                        theme.colors.primary
+                    }
+                    textColor={
+                        theme.colors.secondary
+                    }
+                    width="562px"
+                    onClick={
+                        () => console.log('Download syllabus clicked')
+                    }/>
+            </BottomButtonWrapper>
+        </Wrap>
+    )
 }
 
 export default Programs

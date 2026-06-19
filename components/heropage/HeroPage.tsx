@@ -25,9 +25,13 @@ const HeroContainer = styled.div `
   }
 `;
 
-const FloatingIcon = styled.img<{ $position: string }>`
+const FloatingIcon = styled.img < {
+    $position: string
+} > `
   position: absolute;
-  ${props => props.$position};
+  ${
+    props => props.$position
+};
   animation: float 3s ease-in-out infinite;
   
   @keyframes float {
@@ -105,12 +109,17 @@ const Title = styled.h1 `
   font-family: 'Rightgrotesk-widemedium', sans-serif;
   font-weight: 500;
   line-height: 120%;
-  color: ${theme.colors.secondary};
+  color: ${
+    theme.colors.secondary
+};
   margin-bottom: 3rem;
   text-align: center;
+  letter-spacing: 0.6px;
 
   span {
-    color: ${theme.colors.primary};
+    color: ${
+    theme.colors.primary
+};
   }
 
   @media (max-width: 768px) {
@@ -128,7 +137,9 @@ const SubTitle = styled.p `
   line-height: 150%;
   letter-spacing: 0%;
   text-align: center;
-  color: ${theme.colors.secondaryTextColor};
+  color: ${
+    theme.colors.secondaryTextColor
+};
   margin-bottom: 3rem;
   padding: 0 1rem;
 
@@ -137,7 +148,7 @@ const SubTitle = styled.p `
   }
 `;
 
-const ButtonWrapper = styled.div`
+const ButtonWrapper = styled.div `
   @media (max-width: 580px) {
     margin-top: 2.6rem;
     width: 100%;
@@ -149,10 +160,10 @@ const WHATSAPP_URL = 'https://wa.me/919834877006';
 const HeroPage = () => {
     return (
         <HeroContainer>
-            <BlueIcon src="/Images/blue.svg" alt="Blue" $position="" />
-            <KaaviIcon src="/Images/kaavi.svg" alt="Kaavi" $position="" />
-            <GreenIcon src="/Images/green.svg" alt="Green" $position="" />
-            
+            <BlueIcon src="/Images/blue.svg" alt="Blue" $position=""/>
+            <KaaviIcon src="/Images/kaavi.svg" alt="Kaavi" $position=""/>
+            <GreenIcon src="/Images/green.svg" alt="Green" $position=""/>
+
             <TextWrap>
 
                 <Title>From Beginner to Confident<br/>{' '}
@@ -163,17 +174,19 @@ const HeroPage = () => {
                     in 8 Weeks</Title>
                 <SubTitle>No fluff. Just practical skills, real projects, and AI-powered tools to help you break into the design industry.</SubTitle>
                 <ButtonWrapper>
-                <Button text="Book My Free Career Call"
-                    bgColor={
-                        theme.colors.primary
-                    }
-                    textColor={
-                        theme.colors.secondary
-                    }
-                    iconSrc="/Logo/whatsappLogo.svg"
-                    iconAlt="WhatsApp"
-                    onClick={() => window.open(WHATSAPP_URL, '_blank', 'noopener,noreferrer')}
-                    width='19.063rem'/>
+                    <Button text="Book My Free Career Call"
+                        bgColor={
+                            theme.colors.primary
+                        }
+                        textColor={
+                            theme.colors.secondary
+                        }
+                        iconSrc="/Logo/whatsappLogo.svg"
+                        iconAlt="WhatsApp"
+                        onClick={
+                            () => window.open(WHATSAPP_URL, '_blank', 'noopener,noreferrer')
+                        }
+                        width='19.063rem'/>
                 </ButtonWrapper>
             </TextWrap>
         </HeroContainer>

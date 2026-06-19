@@ -42,7 +42,8 @@ const StickyWrapper = styled.div`
 `;
 
 const Title = styled.h2`
-  font-family: 'RightGrotesk-widemedium', sans-serif;
+  font-family: 'Rightgrotesk-widemedium', sans-serif;
+  letter-spacing: 0.5px;
   font-size: 3.375rem;
   color: ${theme.colors.textColor};
   margin: 0 0 1rem 0;
@@ -138,15 +139,7 @@ const FadingLine = styled.div`
   z-index: 5;
 
   @media (max-width: 768px) {
-    top: 22rem;
-  }
-
-  @media (max-width: 480px) {
-    top: 17rem;
-  }
-
-  @media (max-width: 320px) {
-    top: 12rem;
+    display: none;
   }
 `;
 
@@ -178,6 +171,8 @@ const NumberCircle = styled.div<{ $isActive: boolean; $angle: number }>`
     height: 44px;
     font-size: 0.875rem;
     top: 22rem;
+    opacity: ${props => props.$isActive ? 1 : 0};
+    pointer-events: ${props => props.$isActive ? 'auto' : 'none'};
     transform: 
       translateX(-50%) 
       translateY(-50%)
@@ -225,7 +220,7 @@ const ContentCard = styled.div`
   margin-top: 3.5rem;
 
   @media (max-width: 768px) {
-    margin-top: 1rem;
+    margin-top: 3.5rem;
     padding: 1.5rem 1rem;
     width: 90%;
   }
@@ -249,7 +244,7 @@ const ContentTitle = styled.h3`
 
   @media (max-width: 768px) {
     font-size: 1.5rem;
-    margin: 0 0 1rem 0;
+    margin: 0 0 2rem 0;
   }
 
   @media (max-width: 480px) {
@@ -265,17 +260,54 @@ const ContentDescription = styled.p`
   font-family: 'Pangram-Regular', sans-serif;
   font-size: 1rem;
   color: #525252;
-  margin: 0 0 3.5rem 0;
+  margin: 0 0 8rem 0;
   line-height: 1.6;
+  padding: 1.5rem 0;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #A3DEAC00 0%, #A3DEAC 30%, #A3DEAC 70%, #A3DEAC00 100%);
+  }
+
+  &::before { top: 0; }
+  &::after  { bottom: 0; }
 
   @media (max-width: 768px) {
     font-size: 0.875rem;
     margin: 0 0 1.5rem 0;
+    padding: 1rem 0;
   }
 
   @media (max-width: 320px) {
     font-size: 0.8125rem;
     margin: 0 0 1rem 0;
+    padding: 0.75rem 0;
+  }
+`;
+
+const DesktopButtonWrapper = styled.div`
+  display: block;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const MobileButtonWrapper = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    width: 100%;
+    padding: 0 1.125rem;
+    margin-top: 1.5rem;
   }
 `;
 
@@ -283,11 +315,23 @@ const ProgressText = styled.p`
   font-family: 'Pangram-Medium', sans-serif;
   font-size: 1rem;
   color: #525252;
-  margin: 5.875rem 0 0 0;
+  margin: 1rem 0 0 0;
 
   @media (max-width: 768px) {
-    margin: 1rem 0 0 0;
+    display: none;
+  }
+`;
+
+const MobileProgressText = styled.p`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    font-family: 'Pangram-Medium', sans-serif;
     font-size: 0.875rem;
+    color: #525252;
+    margin: 0.75rem 0 0 0;
+    text-align: center;
   }
 `;
 
@@ -420,22 +464,39 @@ export const WhyCourse = () => {
           <ContentCard>
             <ContentTitle>{courseItems[activeIndex].title}</ContentTitle>
             <ContentDescription>{courseItems[activeIndex].description}</ContentDescription>
-            
-            <Button 
-              text="Book My Free Career Call"
-              bgColor={theme.colors.primary}
-              textColor={theme.colors.textColor}
-              width="100%"
-              iconSrc="/Logo/whatsappLogo.svg"
-              iconAlt="WhatsApp"
-              onClick={() => window.open('https://wa.me/919834877006', '_blank', 'noopener,noreferrer')}
-            />
-            
+
+            <DesktopButtonWrapper>
+              <Button 
+                text="Book My Free Career Call"
+                bgColor={theme.colors.primary}
+                textColor={theme.colors.textColor}
+                width="100%"
+                iconSrc="/Logo/whatsappLogo.svg"
+                iconAlt="WhatsApp"
+                onClick={() => window.open('https://wa.me/919834877006', '_blank', 'noopener,noreferrer')}
+              />
+            </DesktopButtonWrapper>
+
             <ProgressText>
               {(activeIndex + 1).toString().padStart(2, '0')}/{courseItems.length.toString().padStart(2, '0')}
             </ProgressText>
           </ContentCard>
         </CarouselContainer>
+
+        <MobileButtonWrapper>
+          <Button 
+            text="Book My Free Career Call"
+            bgColor={theme.colors.primary}
+            textColor={theme.colors.textColor}
+            width="100%"
+            iconSrc="/Logo/whatsappLogo.svg"
+            iconAlt="WhatsApp"
+            onClick={() => window.open('https://wa.me/919834877006', '_blank', 'noopener,noreferrer')}
+          />
+          <MobileProgressText>
+            {(activeIndex + 1).toString().padStart(2, '0')}/{courseItems.length.toString().padStart(2, '0')}
+          </MobileProgressText>
+        </MobileButtonWrapper>
       </StickyWrapper>
     </WhyCourseContainer>
   )

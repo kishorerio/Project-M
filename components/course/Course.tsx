@@ -34,7 +34,8 @@ const LeftSection = styled.div `
 `;
 
 const CourseTitle = styled.h2 `
-  font-family: 'RightGrotesk-Medium', sans-serif;
+  font-family: 'Rightgrotesk-widemedium', sans-serif;
+  letter-spacing: 0.5px;
   font-size: 3.375rem;
   font-weight: 500;
   color: ${
@@ -158,7 +159,7 @@ const CourseNumber = styled.div `
   flex-shrink: 0;
 
   @media (max-width: 768px) {
-    min-width: 40px;
+    width: 40px;
     height: 40px;
     font-size: 0.875rem;
   }
@@ -251,7 +252,7 @@ export const Course = () => {
                 <CourseTitle>
                     The Course is ideal<br/>
                     for you
-                    <span className="highlight">if you are</span>
+                    <span className="highlight"> if you are</span>
                 </CourseTitle>
 
                 <CourseImage src="/Images/theCourse.png" alt="The Course"/>

@@ -42,7 +42,8 @@ const LeftSection = styled.div`
 `;
 
 const Title = styled.h2`
-  font-family: 'Pangram-Medium', sans-serif;
+  font-family: 'Rightgrotesk-widemedium', sans-serif;
+  letter-spacing: 0.5px;
   font-weight: 500;
   font-size: 3.375rem;
   line-height: 120%;
