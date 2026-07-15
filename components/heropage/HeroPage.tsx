@@ -193,7 +193,7 @@ const HeroPage = () => {
                     </span>
                     {' '}
                     in 8 Weeks</Title>
-                <SubTitle>No fluff. Just practical skills, real projects, and AI-powered tools to help you break into the design industry.</SubTitle>
+                <SubTitle>No fluff. Just practical skills, real-world projects, and AI-powered tools to prepare you for a successful career in UI/UX design.</SubTitle>
                 <ButtonWrapper>
                     <Button text="Book My Free Career Call"
                         bgColor={

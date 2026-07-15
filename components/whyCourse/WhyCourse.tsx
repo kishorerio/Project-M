@@ -264,6 +264,10 @@ const ContentDescription = styled.p`
   line-height: 1.6;
   padding: 1.5rem 0;
   position: relative;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+  word-break: break-word;
 
   &::before,
   &::after {
@@ -351,27 +355,27 @@ export const WhyCourse = () => {
     {
       id: 1,
       title: 'Live Sessions',
-      description: 'Get Life time Access to Recordings + 2 Weekly Live Session'
+      description: 'Learn directly from experienced UI/UX professionals through interactive, instructor-led classes with real-time guidance and feedback.'
     },
     {
       id: 2,
       title: 'Real Projects',
-      description: 'Work on industry-standard projects to build your portfolio'
+      description: 'Work on industry-inspired projects that help you apply your skills and build a portfolio employers value.'
     },
     {
       id: 3,
       title: 'AI-Powered Tools',
-      description: 'Learn to use cutting-edge AI tools for modern design workflows'
+      description: 'Learn to use the latest AI tools to streamline your design process, boost productivity, and create better user experiences.'
     },
     {
       id: 4,
       title: 'Career Support',
-      description: 'Get personalized mentorship and career guidance throughout'
+      description: 'Receive expert guidance on resumes, portfolios, interviews, and job applications to confidently start your UI/UX career.'
     },
     {
       id: 5,
       title: 'Community Access',
-      description: 'Join a vibrant community of designers and industry experts'
+      description: 'Be part of a supportive community to ask questions, share ideas, receive feedback, and stay motivated throughout your journey.'
     }
   ];
 

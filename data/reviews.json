@@ -1,56 +1,65 @@
 [
   {
     "id": 1,
-    "name": "Sarah Johnson",
+    "name": "Vijay",
     "role": "UI/UX Designer",
-    "subject": "Portfolio Development",
-    "review": "This course completely transformed my design skills. The mentorship was incredible and I landed my first design job within 2 months of completing the program.",
+    "subject": "UX Fundamentals",
+    "review": "Basically I have 2 years of experience in UI/UX design, but earlier I didn't have a strong understanding of UX. Later, I came across your UI/UX videos on Instagram and decided to connect. After the sessions focused on UX design, those classes were really useful and now I'm able to apply UX principles in real-world projects as well. Thank you for these valuable classes!",
     "rating": 5,
-    "profileImage": "/Images/sample.jpg"
+    "profileImage": ""
   },
   {
     "id": 2,
-    "name": "Michael Chen",
-    "role": "Product Designer",
-    "subject": "Design Fundamentals",
-    "review": "Amazing course structure! The practical projects helped me build a portfolio that impressed employers. Highly recommend for beginners.",
+    "name": "Pragti",
+    "role": "Graphic Designer",
+    "subject": "UI/UX from Scratch",
+    "review": "Hi, I'm Pragti, a Fashion Design graduate and currently a Graphic Designer. I was always interested in UI/UX, but I couldn't find the right platform to learn it from scratch until I joined Aarasoft Academy. A big thanks to my mentor, Manoj Sir, for patiently clearing my doubts and making every concept easy to understand.",
     "rating": 5,
-    "profileImage": "/Images/sample.jpg"
+    "profileImage": ""
   },
   {
     "id": 3,
-    "name": "Emily Rodriguez",
-    "role": "Freelance Designer",
-    "subject": "Freelance Mentorship",
-    "review": "The freelance mentorship was a game-changer. I learned how to price my work and find clients. Now I'm running my own design business successfully.",
-    "rating": 4,
-    "profileImage": "/Images/sample.jpg"
+    "name": "Mukesh",
+    "role": "Cashier",
+    "subject": "Career Growth",
+    "review": "I started with no knowledge of UI/UX, but now I can create designs with confidence. I'm really happy, and the only reason is Aarasoft. Manoj Bro explains everything with care and makes it easy to understand. His guidance has been very helpful in my UI/UX learning journey and has helped me grow in my career.",
+    "rating": 5,
+    "profileImage": ""
   },
   {
     "id": 4,
-    "name": "David Kim",
-    "role": "Junior Designer",
-    "subject": "Design Tools",
-    "review": "Great introduction to design tools and principles. The no-coding approach made it accessible for someone with zero technical background like me.",
+    "name": "Suhashraj",
+    "role": "UI/UX Designer",
+    "subject": "Mock Interview",
+    "review": "The mock interview gave a clear understanding of UI/UX fundamentals, including design principles, user experience thinking, and information architecture. My designs were reviewed with feedback on alignment, spacing, and overall usability. Overall, it was a valuable experience that helped identify gaps and improve my approach to design.",
     "rating": 5,
-    "profileImage": "/Images/sample.jpg"
+    "profileImage": ""
   },
   {
     "id": 5,
-    "name": "Lisa Thompson",
-    "role": "Career Changer",
-    "subject": "Career Transition",
-    "review": "Switched from marketing to UX design thanks to this course. The mentors provided excellent guidance throughout my career transition journey.",
-    "rating": 4,
-    "profileImage": "/Images/sample.jpg"
+    "name": "Sruti",
+    "role": "Student",
+    "subject": "Career Roadmap",
+    "review": "Thank you so much, Sir. The way you explained how, why, and what inspired you to enter the UI/UX design field was truly amazing. Thank you for giving me a clearer roadmap and valuable guidance. It was wonderful connecting with you, and I really appreciate the time and insights you shared.",
+    "rating": 5,
+    "profileImage": ""
   },
   {
     "id": 6,
-    "name": "Alex Martinez",
-    "role": "Design Student",
-    "subject": "Portfolio Building",
-    "review": "The portfolio building section was outstanding. I created 3 professional projects that helped me stand out in job interviews.",
+    "name": "Ganesh",
+    "role": "Student",
+    "subject": "Learning Path",
+    "review": "Thank you for taking the time to guide me. Your explanation about the UI/UX learning path was really clear and motivating. The call really helped me understand how to start and what to focus on next.",
     "rating": 5,
-    "profileImage": "/Images/sample.jpg"
+    "profileImage": ""
+  },
+  {
+    "id": 7,
+    "name": "Sivasundarajan",
+    "role": "UI/UX Designer",
+    "subject": "Design Guidance",
+    "review": "Thank you so much, bro, for all the UI/UX guidance and for pointing out my mistakes throughout this time. Now I clearly understand what level I'm at, how much I need to improve, and how to work on it. Really appreciate your support — please keep guiding everyone and continue teaching like this. Thanks again!",
+    "rating": 5,
+    "profileImage": ""
   }
 ]

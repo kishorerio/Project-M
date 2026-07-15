@@ -209,11 +209,12 @@ const CourseAccess = styled.p `
   margin: 0;
   line-height: 1.5;
   text-align: left;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
+  max-width: 17rem;
 
   @media (max-width: 768px) {
     font-size: 0.875rem;
-    white-space: normal;
   }
 `;
 
@@ -230,19 +231,19 @@ export const Course = () => {
             title: [
                 'Non - IT Professionals', '& Fresh graduates'
             ],
-            access: 'Get Life time Access to Recordings +\n2 Weekly Live Session'
+            access: 'Start your UI/UX journey from scratch with a structured, beginner-friendly learning path.'
         }, {
             id: 2,
             title: [
                 'Students &', 'Career Gap Students'
             ],
-            access: 'Get Life time Access to Recordings +\n2 Weekly Live Session'
+            access: 'Build practical skills, real projects, and a strong portfolio to confidently launch or restart your career.'
         }, {
             id: 3,
             title: [
                 'Graphic Designers &', 'Software Developers'
             ],
-            access: 'Get Life time Access to Recordings +\n2 Weekly Live Session'
+            access: 'Learn to use the latest AI tools to streamline your design process, boost productivity, and create better user experiences.'
         }
     ];
 

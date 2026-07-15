@@ -3,8 +3,10 @@
 import styled from 'styled-components'
 import theme from '../../theme/theme'
 
-const WhyAarasoftContainer = styled.section`
-  background-color: ${theme.colors.white};
+const WhyAarasoftContainer = styled.section `
+  background-color: ${
+    theme.colors.white
+};
   margin: 0 2.5rem;
   margin-bottom: 6.25rem;
 
@@ -17,9 +19,11 @@ const WhyAarasoftContainer = styled.section`
   }
 `;
 
-const Title = styled.h2`
+const Title = styled.h2 `
   font-size: 3.375rem;
-  color: ${theme.colors.textColor};
+  color: ${
+    theme.colors.textColor
+};
   margin: 0 0 46px 0;
   line-height: 1.2;
   text-align: center;
@@ -27,7 +31,9 @@ const Title = styled.h2`
   letter-spacing: 1px;
 
   .highlight {
-    color: ${theme.colors.primary};
+    color: ${
+    theme.colors.primary
+};
   }
 
   @media (max-width: 768px) {
@@ -36,7 +42,7 @@ const Title = styled.h2`
   }
 `;
 
-const Subtitle = styled.p`
+const Subtitle = styled.p `
   font-family: 'Pangram-Regular', sans-serif;
   font-size: 1rem;
   color: #525252;
@@ -49,7 +55,7 @@ const Subtitle = styled.p`
   }
 `;
 
-const CardsGrid = styled.div`
+const CardsGrid = styled.div `
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   gap: 1.5rem;
@@ -67,7 +73,7 @@ const CardsGrid = styled.div`
   }
 `;
 
-const CenterColumn = styled.div`
+const CenterColumn = styled.div `
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -83,7 +89,7 @@ const CenterColumn = styled.div`
 `;
 
 /* Mobile-only flat layout — each piece is a direct flex child of CardsGrid */
-const MobileTitleSection = styled.div`
+const MobileTitleSection = styled.div `
   display: none;
 
   @media (max-width: 768px) {
@@ -98,12 +104,12 @@ const MobileTitleSection = styled.div`
   }
 `;
 
-const MobileCard = styled.div<{
-  $bgImage?: string;
-  $bgColor?: string;
-  $height?: string;
-  $order: number;
-}>`
+const MobileCard = styled.div < {
+    $bgImage?: string;
+    $bgColor?: string;
+    $height?: string;
+    $order: number;
+} > `
   display: none;
 
   @media (max-width: 768px) {
@@ -114,24 +120,34 @@ const MobileCard = styled.div<{
     text-align: center;
     padding: 1.5rem;
     border-radius: 1.25rem;
-    min-height: ${props => props.$height === '472px' ? '300px' : '200px'};
+    min-height: ${
+    props => props.$height === '472px' ? '300px' : '200px'
+};
     position: relative;
     overflow: hidden;
     gap: 2rem;
-    order: ${props => props.$order};
+    order: ${
+    props => props.$order
+};
     width: 100%;
 
-    ${props => props.$bgImage ? `
-      background-image: url(${props.$bgImage});
+    ${
+    props => props.$bgImage ? `
+      background-image: url(${
+        props.$bgImage
+    });
       background-size: cover;
       background-position: center;
     ` : `
-      background-color: ${props.$bgColor || '#f5f5f5'};
-    `}
+      background-color: ${
+        props.$bgColor || '#f5f5f5'
+    };
+    `
+}
   }
 `;
 
-const TitleSection = styled.div`
+const TitleSection = styled.div `
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,7 +156,7 @@ const TitleSection = styled.div`
   margin-bottom: 1rem;
 `;
 
-const CenterCardsRow = styled.div`
+const CenterCardsRow = styled.div `
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
@@ -151,12 +167,12 @@ const CenterCardsRow = styled.div`
   }
 `;
 
-const Card = styled.div<{
-  $bgImage?: string;
-  $bgColor?: string;
-  $height?: string;
-  $mobileOrder?: number;
-}>`
+const Card = styled.div < {
+    $bgImage?: string;
+    $bgColor?: string;
+    $height?: string;
+    $mobileOrder?: number;
+} > `
   padding: 2rem;
   border-radius: 1.25rem;
   display: flex;
@@ -164,33 +180,45 @@ const Card = styled.div<{
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: ${props => props.$height || '300px'};
+  min-height: ${
+    props => props.$height || '300px'
+};
   position: relative;
   overflow: hidden;
   gap: 2rem;
 
-  ${props => props.$bgImage ? `
-    background-image: url(${props.$bgImage});
+  ${
+    props => props.$bgImage ? `
+    background-image: url(${
+        props.$bgImage
+    });
     background-size: cover;
     background-position: center;
   ` : `
-    background-color: ${props.$bgColor || '#f5f5f5'};
-  `}
+    background-color: ${
+        props.$bgColor || '#f5f5f5'
+    };
+  `
+}
 
   @media (max-width: 768px) {
     display: none;
   }
 `;
 
-const CardNumber = styled.div<{
-  $bgColor?: string;
-  $textColor?: string;
-}>`
+const CardNumber = styled.div < {
+    $bgColor?: string;
+    $textColor?: string;
+} > `
   width: 68px;
   height: 68px;
   border-radius: 50%;
-  background-color: ${props => props.$bgColor || theme.colors.primary};
-  color: ${props => props.$textColor || theme.colors.textColor};
+  background-color: ${
+    props => props.$bgColor || theme.colors.primary
+};
+  color: ${
+    props => props.$textColor || theme.colors.textColor
+};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,10 +232,14 @@ const CardNumber = styled.div<{
   }
 `;
 
-const CardTitle = styled.h3<{ $textColor?: string }>`
+const CardTitle = styled.h3 < {
+    $textColor?: string
+} > `
   font-family: 'RightGrotesk-widemedium', sans-serif;
   font-size: 1.5rem;
-  color: ${props => props.$textColor || theme.colors.textColor};
+  color: ${
+    props => props.$textColor || theme.colors.textColor
+};
   margin: 0;
   line-height: 1.3;
 
@@ -216,11 +248,13 @@ const CardTitle = styled.h3<{ $textColor?: string }>`
   }
 `;
 
-const ArrowIcon = styled.div`
+const ArrowIcon = styled.div `
   width: 68px;
   height: 68px;
   border-radius: 50%;
-  background-color: ${theme.colors.primary};
+  background-color: ${
+    theme.colors.primary
+};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -237,7 +271,7 @@ const ArrowIcon = styled.div`
   }
 `;
 
-const ContactCardContent = styled.div`
+const ContactCardContent = styled.div `
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -246,165 +280,286 @@ const ContactCardContent = styled.div`
 `;
 
 interface CardData {
-  id: number;
-  number?: string;
-  title: string;
-  bgImage?: string;
-  bgColor?: string;
-  height?: string;
-  textColor?: string;
-  numberBgColor?: string;
-  numberTextColor?: string;
-  isContactCard?: boolean;
+    id: number;
+    number?: string;
+    title: string;
+    bgImage?: string;
+    bgColor?: string;
+    height?: string;
+    textColor?: string;
+    numberBgColor?: string;
+    numberTextColor?: string;
+    isContactCard?: boolean;
 }
 
 export const WhyAarasoft = () => {
-  const cardsData: CardData[] = [
-    {
-      id: 1,
-      number: '01',
-      title: 'Real-World Projects, Not Just Theory',
-      bgImage: '/Images/RectangleOne.png',
-      height: '472px',
-      textColor: theme.colors.white,
-      numberBgColor: theme.colors.primary,
-      numberTextColor: theme.colors.textColor,
-    },
-    {
-      id: 2,
-      number: '02',
-      title: 'AI-Powered Learning Approach',
-      bgColor: '#f0f0f0',
-      height: '290px',
-      textColor: theme.colors.textColor,
-      numberBgColor: theme.colors.primary,
-      numberTextColor: theme.colors.textColor,
-    },
-    {
-      id: 3,
-      title: 'Contact Us',
-      bgColor: '#f0f0f0',
-      height: '290px',
-      textColor: theme.colors.textColor,
-      isContactCard: true,
-    },
-    {
-      id: 4,
-      number: '03',
-      title: 'Career-Oriented Mentorship',
-      bgImage: '/Images/RectangleTwo.png',
-      height: '472px',
-      textColor: theme.colors.secondary,
-      numberBgColor: theme.colors.white,
-      numberTextColor: theme.colors.textColor,
-    },
-  ];
+    const cardsData: CardData[] = [
+        {
+            id: 1,
+            number: '01',
+            title: 'Real-World Projects, Not Just Theory',
+            bgImage: '/Images/RectangleOne.png',
+            height: '472px',
+            textColor: theme.colors.white,
+            numberBgColor: theme.colors.primary,
+            numberTextColor: theme.colors.textColor
+        }, {
+            id: 2,
+            number: '02',
+            title: 'AI-Powered Learning Approach',
+            bgColor: '#f0f0f0',
+            height: '290px',
+            textColor: theme.colors.textColor,
+            numberBgColor: theme.colors.primary,
+            numberTextColor: theme.colors.textColor
+        }, {
+            id: 3,
+            title: 'Contact Us',
+            bgColor: '#f0f0f0',
+            height: '290px',
+            textColor: theme.colors.textColor,
+            isContactCard: true
+        }, {
+            id: 4,
+            number: '03',
+            title: 'Career-Oriented Mentorship',
+            bgImage: '/Images/RectangleTwo.png',
+            height: '472px',
+            textColor: theme.colors.secondary,
+            numberBgColor: theme.colors.white,
+            numberTextColor: theme.colors.textColor
+        },
+    ];
 
-  return (
-    <WhyAarasoftContainer>
-      <CardsGrid>
+    return (
+        <WhyAarasoftContainer>
+            <CardsGrid> {/* ── MOBILE ONLY: Title + Subtitle (order 0) ── */}
+                <MobileTitleSection>
+                    <Title>
+                        Why<span className="highlight">
+                            Aarasoft</span><br/>Academy?
+                    </Title>
+                    <Subtitle>
+                        No fluff. Just practical skills, real-world projects, and AI-powered tools to prepare you for a successful career in UI/UX design.
+                    </Subtitle>
+                </MobileTitleSection>
 
-        {/* ── MOBILE ONLY: Title + Subtitle (order 0) ── */}
-        <MobileTitleSection>
-          <Title>
-            Why<span className="highlight"> Aarasoft</span><br />Academy?
-          </Title>
-          <Subtitle>
-            No fluff. Just practical skills, real projects, and AI-powered tools to help you break into the design industry.
-          </Subtitle>
-        </MobileTitleSection>
+                {/* ── MOBILE ONLY: Card 01 (order 1) ── */}
+                <MobileCard $bgImage={
+                        cardsData[0].bgImage
+                    }
+                    $height={
+                        cardsData[0].height
+                    }
+                    $order={1}>
+                    <CardNumber $bgColor={
+                            cardsData[0].numberBgColor
+                        }
+                        $textColor={
+                            cardsData[0].numberTextColor
+                    }>
+                        {
+                        cardsData[0].number
+                    } </CardNumber>
+                    <CardTitle $textColor={
+                        cardsData[0].textColor
+                    }>
+                        {
+                        cardsData[0].title
+                    }</CardTitle>
+                </MobileCard>
 
-        {/* ── MOBILE ONLY: Card 01 (order 1) ── */}
-        <MobileCard $bgImage={cardsData[0].bgImage} $height={cardsData[0].height} $order={1}>
-          <CardNumber $bgColor={cardsData[0].numberBgColor} $textColor={cardsData[0].numberTextColor}>
-            {cardsData[0].number}
-          </CardNumber>
-          <CardTitle $textColor={cardsData[0].textColor}>{cardsData[0].title}</CardTitle>
-        </MobileCard>
+                {/* ── MOBILE ONLY: Card 02 (order 2) ── */}
+                <MobileCard $bgColor={
+                        cardsData[1].bgColor
+                    }
+                    $height={
+                        cardsData[1].height
+                    }
+                    $order={2}>
+                    <CardNumber $bgColor={
+                            cardsData[1].numberBgColor
+                        }
+                        $textColor={
+                            cardsData[1].numberTextColor
+                    }>
+                        {
+                        cardsData[1].number
+                    } </CardNumber>
+                    <CardTitle $textColor={
+                        cardsData[1].textColor
+                    }>
+                        {
+                        cardsData[1].title
+                    }</CardTitle>
+                </MobileCard>
 
-        {/* ── MOBILE ONLY: Card 02 (order 2) ── */}
-        <MobileCard $bgColor={cardsData[1].bgColor} $height={cardsData[1].height} $order={2}>
-          <CardNumber $bgColor={cardsData[1].numberBgColor} $textColor={cardsData[1].numberTextColor}>
-            {cardsData[1].number}
-          </CardNumber>
-          <CardTitle $textColor={cardsData[1].textColor}>{cardsData[1].title}</CardTitle>
-        </MobileCard>
+                {/* ── MOBILE ONLY: Card 03 Contact Us (order 3) ── */}
+                <MobileCard $bgColor={
+                        cardsData[2].bgColor
+                    }
+                    $height={
+                        cardsData[2].height
+                    }
+                    $order={3}>
+                    <ContactCardContent>
+                        <ArrowIcon>
+                            <img src="/Logo/arrow.svg" alt="Arrow"/>
+                        </ArrowIcon>
+                        <CardTitle $textColor={
+                            cardsData[2].textColor
+                        }>
+                            {
+                            cardsData[2].title
+                        }</CardTitle>
+                    </ContactCardContent>
+                </MobileCard>
 
-        {/* ── MOBILE ONLY: Card 03 Contact Us (order 3) ── */}
-        <MobileCard $bgColor={cardsData[2].bgColor} $height={cardsData[2].height} $order={3}>
-          <ContactCardContent>
-            <ArrowIcon>
-              <img src="/Logo/arrow.svg" alt="Arrow" />
-            </ArrowIcon>
-            <CardTitle $textColor={cardsData[2].textColor}>{cardsData[2].title}</CardTitle>
-          </ContactCardContent>
-        </MobileCard>
+                {/* ── MOBILE ONLY: Card 04 (order 4) ── */}
+                <MobileCard $bgImage={
+                        cardsData[3].bgImage
+                    }
+                    $height={
+                        cardsData[3].height
+                    }
+                    $order={4}>
+                    <CardNumber $bgColor={
+                            cardsData[3].numberBgColor
+                        }
+                        $textColor={
+                            cardsData[3].numberTextColor
+                    }>
+                        {
+                        cardsData[3].number
+                    } </CardNumber>
+                    <CardTitle $textColor={
+                        cardsData[3].textColor
+                    }>
+                        {
+                        cardsData[3].title
+                    }</CardTitle>
+                </MobileCard>
 
-        {/* ── MOBILE ONLY: Card 04 (order 4) ── */}
-        <MobileCard $bgImage={cardsData[3].bgImage} $height={cardsData[3].height} $order={4}>
-          <CardNumber $bgColor={cardsData[3].numberBgColor} $textColor={cardsData[3].numberTextColor}>
-            {cardsData[3].number}
-          </CardNumber>
-          <CardTitle $textColor={cardsData[3].textColor}>{cardsData[3].title}</CardTitle>
-        </MobileCard>
+                {/* ── DESKTOP / TABLET: Left Card ── */}
+                <Card key={
+                        cardsData[0].id
+                    }
+                    $bgImage={
+                        cardsData[0].bgImage
+                    }
+                    $height={
+                        cardsData[0].height
+                }>
+                    <CardNumber $bgColor={
+                            cardsData[0].numberBgColor
+                        }
+                        $textColor={
+                            cardsData[0].numberTextColor
+                    }>
+                        {
+                        cardsData[0].number
+                    } </CardNumber>
+                    <CardTitle $textColor={
+                        cardsData[0].textColor
+                    }>
+                        {
+                        cardsData[0].title
+                    }</CardTitle>
+                </Card>
 
-        {/* ── DESKTOP / TABLET: Left Card ── */}
-        <Card
-          key={cardsData[0].id}
-          $bgImage={cardsData[0].bgImage}
-          $height={cardsData[0].height}
-        >
-          <CardNumber $bgColor={cardsData[0].numberBgColor} $textColor={cardsData[0].numberTextColor}>
-            {cardsData[0].number}
-          </CardNumber>
-          <CardTitle $textColor={cardsData[0].textColor}>{cardsData[0].title}</CardTitle>
-        </Card>
+                {/* ── DESKTOP / TABLET: Center Column ── */}
+                <CenterColumn>
+                    <TitleSection>
+                        <Title>
+                            Why<span className="highlight">
+                                Aarasoft</span><br/>Academy?
+                        </Title>
+                        <Subtitle>
+                            No fluff. Just practical skills, real projects, and AI-powered tools to help you break into the design industry.
+                        </Subtitle>
+                    </TitleSection>
 
-        {/* ── DESKTOP / TABLET: Center Column ── */}
-        <CenterColumn>
-          <TitleSection>
-            <Title>
-              Why<span className="highlight"> Aarasoft</span><br />Academy?
-            </Title>
-            <Subtitle>
-              No fluff. Just practical skills, real projects, and AI-powered tools to help you break into the design industry.
-            </Subtitle>
-          </TitleSection>
+                    <CenterCardsRow>
+                        <Card key={
+                                cardsData[1].id
+                            }
+                            $bgColor={
+                                cardsData[1].bgColor
+                            }
+                            $height={
+                                cardsData[1].height
+                        }>
+                            <CardNumber $bgColor={
+                                    cardsData[1].numberBgColor
+                                }
+                                $textColor={
+                                    cardsData[1].numberTextColor
+                            }>
+                                {
+                                cardsData[1].number
+                            } </CardNumber>
+                            <CardTitle $textColor={
+                                cardsData[1].textColor
+                            }>
+                                {
+                                cardsData[1].title
+                            }</CardTitle>
+                        </Card>
 
-          <CenterCardsRow>
-            <Card key={cardsData[1].id} $bgColor={cardsData[1].bgColor} $height={cardsData[1].height}>
-              <CardNumber $bgColor={cardsData[1].numberBgColor} $textColor={cardsData[1].numberTextColor}>
-                {cardsData[1].number}
-              </CardNumber>
-              <CardTitle $textColor={cardsData[1].textColor}>{cardsData[1].title}</CardTitle>
-            </Card>
+                        <Card key={
+                                cardsData[2].id
+                            }
+                            $bgColor={
+                                cardsData[2].bgColor
+                            }
+                            $height={
+                                cardsData[2].height
+                        }>
+                            <ContactCardContent>
+                                <ArrowIcon>
+                                    <img src="/Logo/arrow.svg" alt="Arrow"/>
+                                </ArrowIcon>
+                                <CardTitle $textColor={
+                                    cardsData[2].textColor
+                                }>
+                                    {
+                                    cardsData[2].title
+                                }</CardTitle>
+                            </ContactCardContent>
+                        </Card>
+                    </CenterCardsRow>
+                </CenterColumn>
 
-            <Card key={cardsData[2].id} $bgColor={cardsData[2].bgColor} $height={cardsData[2].height}>
-              <ContactCardContent>
-                <ArrowIcon>
-                  <img src="/Logo/arrow.svg" alt="Arrow" />
-                </ArrowIcon>
-                <CardTitle $textColor={cardsData[2].textColor}>{cardsData[2].title}</CardTitle>
-              </ContactCardContent>
-            </Card>
-          </CenterCardsRow>
-        </CenterColumn>
+                {/* ── DESKTOP / TABLET: Right Card ── */}
+                <Card key={
+                        cardsData[3].id
+                    }
+                    $bgImage={
+                        cardsData[3].bgImage
+                    }
+                    $height={
+                        cardsData[3].height
+                }>
+                    <CardNumber $bgColor={
+                            cardsData[3].numberBgColor
+                        }
+                        $textColor={
+                            cardsData[3].numberTextColor
+                    }>
+                        {
+                        cardsData[3].number
+                    } </CardNumber>
+                    <CardTitle $textColor={
+                        cardsData[3].textColor
+                    }>
+                        {
+                        cardsData[3].title
+                    }</CardTitle>
+                </Card>
 
-        {/* ── DESKTOP / TABLET: Right Card ── */}
-        <Card
-          key={cardsData[3].id}
-          $bgImage={cardsData[3].bgImage}
-          $height={cardsData[3].height}
-        >
-          <CardNumber $bgColor={cardsData[3].numberBgColor} $textColor={cardsData[3].numberTextColor}>
-            {cardsData[3].number}
-          </CardNumber>
-          <CardTitle $textColor={cardsData[3].textColor}>{cardsData[3].title}</CardTitle>
-        </Card>
-
-      </CardsGrid>
-    </WhyAarasoftContainer>
-  );
+            </CardsGrid>
+        </WhyAarasoftContainer>
+    );
 };
 
 export default WhyAarasoft;

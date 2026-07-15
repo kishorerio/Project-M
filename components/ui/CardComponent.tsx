@@ -12,6 +12,38 @@ interface CardProps {
   profileImage: string;
 }
 
+// Deterministic colour per first letter so the same person always gets the same colour
+const AVATAR_COLORS = [
+  '#4CAF50', '#2196F3', '#FF5722', '#9C27B0',
+  '#FF9800', '#00BCD4', '#E91E63', '#3F51B5',
+];
+
+const getAvatarColor = (name: string) => {
+  const index = name.charCodeAt(0) % AVATAR_COLORS.length;
+  return AVATAR_COLORS[index];
+};
+
+const AvatarCircle = styled.div<{ $bg: string }>`
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: ${({ $bg }) => $bg};
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pangram-Bold', sans-serif;
+  font-size: 1.375rem;
+  font-weight: 700;
+  flex-shrink: 0;
+
+  @media (max-width: 580px) {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.125rem;
+  }
+`;
+
 const Card = styled.div`
   background-color: #F5F5F5;
   border-radius: 1.25rem;
@@ -169,12 +201,18 @@ export const CardComponent: React.FC<CardProps> = ({
     <Card>
       <div>
         <ProfileSection>
-          <ProfileImage
-            src={profileImage}
-            alt={`${name} profile`}
-            width={62}
-            height={62}
-          />
+          {profileImage ? (
+            <ProfileImage
+              src={profileImage}
+              alt={`${name} profile`}
+              width={62}
+              height={62}
+            />
+          ) : (
+            <AvatarCircle $bg={getAvatarColor(name)}>
+              {name.charAt(0).toUpperCase()}
+            </AvatarCircle>
+          )}
           <ProfileInfo>
             <Name>{name}</Name>
             <Role>{role}</Role>

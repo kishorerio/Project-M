@@ -164,7 +164,7 @@ export const Info = () => {
 
             <TextWrap>
                 <Heading>Current Batch</Heading>
-                <Value>Batch 1</Value>
+                <Value>Batch 3</Value>
             </TextWrap>
             <Divider/>
             <TextWrap>
@@ -174,12 +174,12 @@ export const Info = () => {
             <Divider/>
             <TextWrap>
                 <Heading>Next Batch</Heading>
-                <Value>Batch 2</Value>
+                <Value>Batch 4</Value>
             </TextWrap>
             <Divider/>
             <TextWrap>
                 <Heading>Enrollment begins</Heading>
-                <Value>April 15,2026</Value>
+                <Value>Aug 01,2026</Value>
             </TextWrap>
 
             {/* Mobile layout */}
