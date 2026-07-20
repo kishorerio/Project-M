@@ -180,7 +180,7 @@ const Nav = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const WHATSAPP_URL = 'https://wa.me/919834877006';
+  const WHATSAPP_URL = 'https://wa.me/919342242792';
 
   const scrollToSection = (sectionId: string) => {
     setIsSidebarOpen(false);

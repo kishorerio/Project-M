@@ -172,7 +172,7 @@ const MobileDivider = styled.div`
 `;
 
 export const Footer = () => {
-    const WHATSAPP_URL = 'https://wa.me/919834877006';
+    const WHATSAPP_URL = 'https://wa.me/919342242792';
 
     const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId);

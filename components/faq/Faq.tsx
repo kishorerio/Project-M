@@ -79,10 +79,10 @@ const RightSection = styled.div`
   }
 `;
 
-const FaqItem = styled.div<{ isOpen: boolean }>`
-  border: 1.5px solid ${props => props.isOpen ? theme.colors.primary : '#CCC3E2'};
+const FaqItem = styled.div<{ $isOpen: boolean }>`
+  border: 1.5px solid ${props => props.$isOpen ? theme.colors.primary : '#CCC3E2'};
   border-radius: 1.25rem;
-  background: ${props => props.isOpen 
+  background: ${props => props.$isOpen 
     ? 'radial-gradient(circle at center, #93E46E -100%, #FFFFFF 100%)'
     : '#ffffff'
   };
@@ -207,8 +207,8 @@ const MinusIcon = styled.div`
   }
 `;
 
-const AnswerContainer = styled.div<{ isOpen: boolean }>`
-  max-height: ${props => props.isOpen ? '200px' : '0'};
+const AnswerContainer = styled.div<{ $isOpen: boolean }>`
+  max-height: ${props => props.$isOpen ? '200px' : '0'};
   overflow: hidden;
   transition: max-height 0.3s ease;
 `;
@@ -234,14 +234,14 @@ export const Faq = () => {
           textColor={theme.colors.secondary}
           iconSrc="/Logo/whatsappLogo.svg"
           iconAlt="WhatsApp"
-          onClick={() => console.log('WhatsApp clicked')}
+          onClick={() => window.open('https://wa.me/919342242792', '_blank', 'noopener,noreferrer')}
           width='252px'
         />
       </LeftSection>
       
       <RightSection>
         {faqData.map((faq) => (
-          <FaqItem key={faq.id} isOpen={openItem === faq.id}>
+          <FaqItem key={faq.id} $isOpen={openItem === faq.id}>
             <QuestionHeader onClick={() => toggleItem(faq.id)}>
               <Question>{faq.question}</Question>
               <IconButton>
@@ -252,7 +252,7 @@ export const Faq = () => {
                 )}
               </IconButton>
             </QuestionHeader>
-            <AnswerContainer isOpen={openItem === faq.id}>
+            <AnswerContainer $isOpen={openItem === faq.id}>
               <Answer>{faq.answer}</Answer>
             </AnswerContainer>
           </FaqItem>

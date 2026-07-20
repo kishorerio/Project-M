@@ -304,7 +304,7 @@ export const Course = () => {
                         }
                         width="100%"
                         onClick={
-                            () => console.log('Free lesson clicked')
+                            () => window.open('https://wa.me/919342242792', '_blank', 'noopener,noreferrer')
                         }/>
                 </ButtonWrapper>
             </RightSection>

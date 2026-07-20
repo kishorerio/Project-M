@@ -342,7 +342,7 @@ export const Programs = () => {
                                 }
                                 width="267px"
                                 onClick={
-                                    () => console.log('Download syllabus clicked')
+                                    () => window.open('https://wa.me/919342242792', '_blank', 'noopener,noreferrer')
                                 }/>
                         </TopButtonWrapper>
                     </Header>
@@ -354,6 +354,9 @@ export const Programs = () => {
                                 }
                                 $isHighlighted={
                                     module.isHighlighted
+                                }
+                                onClick={
+                                    () => window.open('https://wa.me/919342242792', '_blank', 'noopener,noreferrer')
                             }>
 
                                 {/* Desktop layout */}
@@ -450,7 +453,7 @@ export const Programs = () => {
                     }
                     width="562px"
                     onClick={
-                        () => console.log('Download syllabus clicked')
+                        () => window.open('https://wa.me/919342242792', '_blank', 'noopener,noreferrer')
                     }/>
             </BottomButtonWrapper>
         </Wrap>

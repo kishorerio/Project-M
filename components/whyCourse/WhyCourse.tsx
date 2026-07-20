@@ -477,7 +477,7 @@ export const WhyCourse = () => {
                 width="100%"
                 iconSrc="/Logo/whatsappLogo.svg"
                 iconAlt="WhatsApp"
-                onClick={() => window.open('https://wa.me/919834877006', '_blank', 'noopener,noreferrer')}
+                onClick={() => window.open('https://wa.me/919342242792', '_blank', 'noopener,noreferrer')}
               />
             </DesktopButtonWrapper>
 
@@ -495,7 +495,7 @@ export const WhyCourse = () => {
             width="100%"
             iconSrc="/Logo/whatsappLogo.svg"
             iconAlt="WhatsApp"
-            onClick={() => window.open('https://wa.me/919834877006', '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open('https://wa.me/919342242792', '_blank', 'noopener,noreferrer')}
           />
           <MobileProgressText>
             {(activeIndex + 1).toString().padStart(2, '0')}/{courseItems.length.toString().padStart(2, '0')}

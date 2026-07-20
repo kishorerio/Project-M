@@ -271,7 +271,7 @@ export const CareerContact = () => {
             iconSrc="/Logo/whatsapp-color.svg"
             iconAlt="WhatsApp"
             width="100%"
-            onClick={() => window.open('https://wa.me/919834877006', '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open('https://wa.me/919342242792', '_blank', 'noopener,noreferrer')}
           />
         </ButtonWrapper>
       </LeftSection>
@@ -331,7 +331,7 @@ export const CareerContact = () => {
             bgColor={theme.colors.secondary}
             textColor={theme.colors.primary}
             width="100%"
-            onClick={() => console.log('Download Syllabus clicked')}
+            onClick={() => window.open('https://wa.me/919342242792', '_blank', 'noopener,noreferrer')}
           />
         </Form>
       </RightSection>

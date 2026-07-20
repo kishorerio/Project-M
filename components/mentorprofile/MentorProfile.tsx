@@ -1,4 +1,7 @@
-import styled from 'styled-components'
+'use client';
+
+import { useState, useEffect } from 'react'
+import styled, { keyframes } from 'styled-components'
 import Image from 'next/image'
 import theme from '../../theme/theme'
 
@@ -9,6 +12,7 @@ const MentorContainer = styled.div`
   margin: 0 2.5rem;
   position: relative;
   margin-bottom: 9.728rem;
+  margin-top: 8.728rem;
 
   @media (max-width: 960px) {
     flex-wrap: wrap;
@@ -64,23 +68,27 @@ const LeftSection = styled.div`
 
   @media (max-width: 960px) {
     width: 100%;
-    height: auto;
-    min-height: 20rem;
+    height: 22rem;
     flex: none;
   }
 
   @media (max-width: 768px) {
-    min-height: 18rem;
+    height: 20rem;
   }
 
   @media (max-width: 480px) {
-    min-height: 15rem;
+    height: 17rem;
   }
 
   @media (max-width: 320px) {
-    min-height: 10rem;
+    height: 14rem;
     width: 100%;
   }
+`;
+
+const fadeIn = keyframes`
+  from { opacity: 0; }
+  to   { opacity: 1; }
 `;
 
 const MentorImageContainer = styled.div`
@@ -91,38 +99,33 @@ const MentorImageContainer = styled.div`
   width: 100%;
   height: 100%;
   padding: 10px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/Images/mentorBg.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    z-index: 1;
-    border-radius: 1.476rem;
-  }
-
-  @media (max-width: 320px) {
-    padding: 6px;
-    max-height: 14rem;
-    overflow: hidden;
-  }
+  border-radius: 1.476rem;
+  overflow: hidden;
 `;
 
-const MentorImage = styled(Image)`
-  position: relative;
-  z-index: 2;
-  object-fit: cover;
-  width: 100% !important;
-  height: auto !important;
-  max-width: 330px;
+const SlideImage = styled.div<{ $visible: boolean }>`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1.476rem;
+  opacity: ${({ $visible }) => ($visible ? 1 : 0)};
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
 `;
+
+// const MentorImage = styled(Image)`
+//   position: relative;
+//   z-index: 2;
+//   object-fit: cover;
+//   width: 100% !important;
+//   height: auto !important;
+//   max-width: 330px;
+// `;
 
 const MentorCard = styled.div`
   background-color: ${theme.colors.white};
@@ -278,7 +281,19 @@ const SocialIcon = styled.a`
   }
 `;
 
+const MENTOR_IMAGES = ['/Images/fullmentor.svg', '/Images/fullmentor2.svg'];
+const SLIDE_INTERVAL = 3000;
+
 export const MentorProfile = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex(prev => (prev + 1) % MENTOR_IMAGES.length);
+    }, SLIDE_INTERVAL);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <MentorContainer>
       {/* Mobile title - shows above image on small screens */}
@@ -286,12 +301,13 @@ export const MentorProfile = () => {
 
       <LeftSection>
         <MentorImageContainer>
-          <MentorImage
-            src="/Images/mentorPic.png"
-            alt="Manoj Kumar - UI/UX Designer"
-            width={330}
-            height={480}
-          />
+          {MENTOR_IMAGES.map((src, i) => (
+            <SlideImage
+              key={src}
+              $visible={i === activeIndex}
+              style={{ backgroundImage: `url('${src}')` }}
+            />
+          ))}
           <MentorCard>
             <MentorName>Manoj Kumar</MentorName>
             <MentorRole>(UI/UX Designer)</MentorRole>

@@ -176,7 +176,7 @@ const ButtonWrapper = styled.div `
   }
 `;
 
-const WHATSAPP_URL = 'https://wa.me/919834877006';
+const WHATSAPP_URL = 'https://wa.me/919342242792';
 
 const HeroPage = () => {
     return (
